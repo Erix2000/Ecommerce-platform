@@ -1,0 +1,110 @@
+[
+    {
+        "comment_id": 1,
+        "course_id": "手沖咖啡基礎課程2天",
+        "user_id": 1,
+        "comment_star": 5,
+        "comment_text": "課程內容豐富全面，但時間安排稍嫌緊湊，希望能更寬鬆，老師專業，學到許多實用技巧，增進了我的沖煮技巧，絕佳的學習經驗，但場地稍微擁擠，希望能改善。",
+        "comment_created_at": "2024-01-14",
+        "comment_valid": 1
+    },
+    {
+        "comment_id": 2,
+        "course_id": 1,
+        "user_id": 2,
+        "comment_star": 5,
+        "comment_text": "課程內容豐富全面，但時間安排稍嫌緊湊，希望能更寬鬆。",
+        "comment_created_at": "2024-01-14",
+        "comment_valid": 1
+    },
+    {
+        "comment_id": 3,
+        "course_id": 1,
+        "user_id": 3,
+        "comment_star": 4,
+        "comment_text": "絕佳的學習經驗，但場地稍微擁擠，希望能改善。",
+        "comment_created_at": "2024-01-13",
+        "comment_valid": 1
+    },
+    {
+        "comment_id": 23,
+        "course_id": 4,
+        "user_id": 1,
+        "comment_star": 5,
+        "comment_text": "老師對咖啡的熱情感染了我，每次上課都很期待。",
+        "comment_created_at": "2023-03-01",
+        "comment_valid": 1
+    },
+    {
+        "comment_id": 24,
+        "course_id": 5,
+        "user_id": 1,
+        "comment_star": 5,
+        "comment_text": "實用的手沖課程，老師的指導很到位，學會了許多技巧。",
+        "comment_created_at": "2023-02-13",
+        "comment_valid": 1
+    },
+    {
+        "comment_id": 25,
+        "course_id": 6,
+        "user_id": 1,
+        "comment_star": 4,
+        "comment_text": "環境優雅，但課程進度偏快，對初學者來說有點吃力。",
+        "comment_created_at": "2022-08-23",
+        "comment_valid": 1
+    },
+    {
+        "comment_id": 26,
+        "course_id": 7,
+        "user_id": 1,
+        "comment_star": 4,
+        "comment_text": "環境舒適，讓人很容易沉浸在學習氛圍中，但課程內容稍嫌淺顯。",
+        "comment_created_at": "2022-06-17",
+        "comment_valid": 1
+    },
+    {
+        "comment_id": 27,
+        "course_id": 8,
+        "user_id": 1,
+        "comment_star": 5,
+        "comment_text": "老師非常專業，學到了很多實用技巧，是一次很棒的學習體驗。",
+        "comment_created_at": "2022-04-16",
+        "comment_valid": 1
+    },
+    {
+        "comment_id": 28,
+        "course_id": 9,
+        "user_id": 1,
+        "comment_star": 4,
+        "comment_text": "拉花課程很有趣，老師很有耐心，但如果能有更多練習時間就更好了。",
+        "comment_created_at": "2022-04-03",
+        "comment_valid": 1
+    },
+    {
+        "comment_id": 29,
+        "course_id": 10,
+        "user_id": 1,
+        "comment_star": 5,
+        "comment_text": "課程結構明確，從理論到實踐都安排得很好，非常推薦。",
+        "comment_created_at": "2021-12-30",
+        "comment_valid": 1
+    },
+    {
+        "comment_id": 30,
+        "course_id": 11,
+        "user_id": 1,
+        "comment_star": 5,
+        "comment_text": "課程內容豐富，但場地稍顯擁擠，希望能改善學習環境。",
+        "comment_created_at": "2021-07-26",
+        "comment_valid": 1
+    },
+    {
+        "comment_id": 31,
+        "course_id": 12,
+        "user_id": 1,
+        "comment_star": 5,
+        "comment_text": "學到了很多挑選咖啡豆的知識，老師分享的經驗非常實用。",
+        "comment_created_at": "2021-03-14",
+        "comment_valid": 1
+    }
+]

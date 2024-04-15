@@ -1,0 +1,96 @@
+[
+  {
+    "item_id": "1",
+    "item_name": "星巴克 派克市場豆",
+    "item_display": "1150",
+    "item_price": "150",
+    "item_img": "https://www.starbucksathome.com/tw/sites/default/files/2021-06/SBUX_Website_WB_longShadow_PikePlace_0.png,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgsz453gA9x5SOAlfoynuFTeme1GX4BrPhutEE-bj8Og&s",
+    "item_spec": "150g",
+    "item_stock": "100",
+    "item_type": "product"
+  },
+  {
+    "item_id": "3",
+    "item_name": "星巴克 黃金烘培咖啡豆",
+    "item_display": "3150",
+
+    "item_price": "350",
+    "item_img": "https://s.yimg.com/zp/MerchandiseImages/233dd2c76a-Gd-8009520.jpg,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgsz453gA9x5SOAlfoynuFTeme1GX4BrPhutEE-bj8Og&s",
+    "item_spec": "350g",
+    "item_stock": "100",
+    "item_type": "product"
+  },
+  {
+    "item_id": "4",
+    "item_name": "星巴克 法式風味咖啡豆",
+    "item_display": "4150",
+
+    "item_price": "450",
+    "item_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqvzOlgON2E9U-ec38cJcrJqdpW1tfNpV4fX17kwFqaA&s,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgsz453gA9x5SOAlfoynuFTeme1GX4BrPhutEE-bj8Og&s",
+    "item_spec": "450g",
+    "item_stock": "5",
+    "item_type": "product"
+  },
+  {
+    "item_id": "10",
+    "item_name": "星巴克 春季限定豆",
+    "item_display": "10150",
+
+    "item_price": "1050",
+    "item_img": "https://www.costco.com.tw/medias/sys_master/images/h84/h64/85001690775582.jpg,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgsz453gA9x5SOAlfoynuFTeme1GX4BrPhutEE-bj8Og&s",
+    "item_spec": "1050g",
+    "item_stock": "1",
+    "item_type": "product"
+  },
+  {
+    "item_id": "1",
+    "item_name": "精品咖啡 國際證照班",
+    "item_display": "88888",
+
+    "item_price": "1150",
+    "item_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy1FuoV-DAUa1DBWaMPDTk2VzkW00eeuHxcsBlh7xPwg&s,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgsz453gA9x5SOAlfoynuFTeme1GX4BrPhutEE-bj8Og&s",
+    "item_location": "台北教室",
+    "item_data": "2024/01/01 ~ 2024/01/03",
+
+    "course_stock": "100",
+    "item_type": "course"
+  },
+  {
+    "item_id": "3",
+    "item_name": "手沖咖啡課程",
+    "item_display": "88888",
+
+    "item_price": "3150",
+    "item_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSypDyl_hQx2rm-HbcUkaUy8x7j83pYNJqNr-b38Ta-2A&s,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgsz453gA9x5SOAlfoynuFTeme1GX4BrPhutEE-bj8Og&s",
+    "item_location": "台中教室",
+    "item_data": "2024/01/01 ~ 2024/01/03",
+
+    "course_stock": "100",
+    "item_type": "course"
+  },
+  {
+    "item_id": "4",
+    "item_name": "義式咖啡實作課程",
+    "item_display": "88888",
+
+    "item_price": "4150",
+    "item_img": "https://coffee.contenta.tw/wp-content/uploads/2023/01/andreas-behr-b9zaa7_1GC8-unsplash-scaled.jpg,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgsz453gA9x5SOAlfoynuFTeme1GX4BrPhutEE-bj8Og&s",
+    "item_location": "台南教室",
+    "item_data": "2024/01/01 ~ 2024/01/03",
+
+    "course_stock": "5",
+    "item_type": "course"
+  },
+  {
+    "item_id": "10",
+    "item_name": "拉花體驗課程",
+    "item_display": "88888",
+
+    "item_price": "10150",
+    "item_img": "https://jalife.cafe/wp-content/uploads/2020/08/IMG_6367.jpg,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgsz453gA9x5SOAlfoynuFTeme1GX4BrPhutEE-bj8Og&s",
+    "item_location": "花蓮教室",
+    "item_data": "2024/01/01 ~ 2024/01/03",
+    "course_stock": "1",
+    "item_type": "course"
+  }
+]

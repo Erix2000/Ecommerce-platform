@@ -1,0 +1,221 @@
+@import "/styles/member-center.module.scss";
+
+/* START: 收藏類型下拉式選單 */
+
+$coupon-status-width: 85px;
+
+.coupon-status-area {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 5px;
+  .coupon-status {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    color: #003e52;
+    font-size: 0.75rem;
+    width: $coupon-status-width;
+    padding-inline-end: 5px;
+  }
+  .status-options {
+    position: absolute;
+    top: calc(100% + 5px);
+    font-size: 0.75rem;
+    font-weight: 200;
+    color: #fff;
+    background-color: #003e52e6;
+    list-style: none;
+    width: $coupon-status-width;
+    padding: 5px 10px;
+    z-index: 998;
+    & li {
+      padding-block: 5px;
+      &:hover {
+        color: #bc955c;
+      }
+    }
+  }
+}
+/* END: 收藏類型下拉式選單 */
+
+/* START: 商品卡片 css */
+.pcard {
+  font-size: 16px;
+  margin-block: 10px;
+  & a {
+    display: flex;
+    position: relative;
+    .like {
+      position: absolute;
+      width: 20px;
+      bottom: 3%;
+      right: 3%;
+    }
+    .product-img {
+      width: 100%;
+    }
+  }
+
+  .card-body {
+    .pcard-title {
+      margin-top: 5px !important;
+      margin-bottom: 10px !important;
+    }
+
+    .pcard-price {
+      margin-bottom: 5px !important;
+    }
+    .add-cart {
+      font-size: 14px;
+      width: 100%;
+      height: 33px;
+      color: #ffffff;
+      background-color: #003e52;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        color: #003e52;
+        background-color: #ffffff;
+        border: 2px solid #003e52;
+      }
+    }
+  }
+}
+
+/* END: 商品卡片 css */
+
+/* START: 文章卡片 css */
+.favorite-forem-list {
+  display: flex;
+}
+.card {
+  margin-block: 10px;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  &:hover {
+    .card-title {
+      color: #bc955c;
+    }
+  }
+  & img {
+    height: 100% !important;
+    //  width: auto;
+    object-fit: cover;
+    aspect-ratio: 2/1;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+  & span {
+    color: #003e52;
+    &:hover {
+      color: #bc955c;
+    }
+  }
+  .card-title h4 {
+    font-weight: 800;
+    font-size: 28px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .card-text {
+    font-weight: 500;
+    height: 50px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .card-info {
+    font-size: 16px;
+    margin-left: 10px;
+    .forum-writer{
+      margin-right: 10px;
+      letter-spacing: 1.5px;
+    }
+    .forum-category{
+      margin-left: 5px;
+      letter-spacing: 1.5px;
+    }
+    .forum-time{
+      letter-spacing: 1.5px;
+    }
+  }
+  .tag1{
+    font-size: 14px;
+    color: #003e52;
+    letter-spacing: 3px;
+    &:hover {
+      color: #bc955c;
+    }
+  }
+  .tag2{
+    font-size: 14px;
+    color: #003e52;
+    letter-spacing: 3px;
+    &:hover {
+      color: #bc955c;
+    }
+  }
+  .tag3 {
+    font-size: 14px;
+    color: #003e52;
+    letter-spacing: 3px;
+    &:hover {
+      color: #bc955c;
+    }
+  }
+  .favorite-button {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .card {
+    & img {
+       width: 100% !important;
+      
+    }
+    .card-title h4 {
+      font-size: 18px;
+    }
+    .card-text {
+      font-size: 16px;
+      margin-bottom: 15px;
+      margin-top: 10px;
+      color:#b2acac;
+    }
+    .card-info {
+      font-size: 12px;
+      // .forum-writer{
+      //   margin-right: 20px;
+      // }
+      .forum-category{
+        margin-left: 10px;
+        letter-spacing: 2px;
+      }
+      .forum-time{
+        letter-spacing: 1.5px;
+      }
+    }
+    .tag {
+      font-size: 12px;
+    }
+  }
+}
+/* END: 文章卡片 css */

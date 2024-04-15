@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>優惠券</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- boostrap@5.3.2 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- bootstrap-icon@1.11.3 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- google font - Noto serif TC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/layout/member2/m-main.css" />
+    <link rel="stylesheet" href="/layout/member2/m-member-center.css" />
+    <style>
+      :root {
+        --coupon-img-size: 110px;
+        --coupon-status-width: 85px;
+        --indigo-90: #003e52e6;
+      }
+      /* START: 優惠券狀態下拉式選單 */
+      .coupon-status-area {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-bottom: 5px;
+        .coupon-status {
+          display: flex;
+          justify-content: space-between;
+          border: none;
+          color: #003e52;
+          font-size: 0.75rem;
+          width: var(--coupon-status-width);
+          padding-inline-end: 5px;
+        }
+        .status-options {
+          position: absolute;
+          top: calc(100% + 5px);
+          font-size: 0.75rem;
+          font-weight: 200;
+          color: #FFFFFF;
+          background-color: #003e52e6;
+          list-style: none;
+          width: var(--coupon-status-width);
+          padding: 5px 10px;
+          & li {
+            padding-block: 5px;
+          }
+        }
+      }
+
+      .coupon-card {
+        display: flex;
+        background-color: #FFFFFF;
+        box-shadow: 4px 4px 4px #00000040;
+        margin-bottom: 15px;
+        .coupon-img {
+          width: var(--coupon-img-size);
+          height: var(--coupon-img-size);
+          object-fit: cover;
+        }
+        .coupon-info {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          align-items: stretch;
+          justify-content: center;
+          padding-inline-start: 10px;
+          width: calc(100% - var(--coupon-img-size) - 10px);
+          .coupon-title {
+            color: #bc955c;
+            font-size: 0.875rem;
+            letter-spacing: 2.5px;
+            margin-top: 5px;
+          }
+          .coupon-discount {
+            color: #003e52;
+            font-size: 0.75rem;
+            letter-spacing: 2.2px;
+          }
+          .coupon-description {
+            color: #003e52;
+            font-size: 0.625rem;
+            letter-spacing: 1.8px;
+          }
+          .coupon-detail {
+            color: #d9d9d9;
+            font-size: 0.625rem;
+            letter-spacing: 1.8px;
+          }
+        }
+      }
+      .card-status-3 {
+        .coupon-img {
+          height: calc(var(--coupon-img-size) * 2 / 3);
+        }
+        .coupon-info {
+          .coupon-title {
+            color: #003e52;
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- START: header -->
+    <header>
+      <img class="header-logo" src="/images/header-logo-mobile.svg" alt="" />
+      <div class="header-icons">
+        <div class="header-member-area">
+          <i class="bi bi-person-fill member-icon"></i>
+          |
+          <i class="bi bi-cart-fill cart-icon"></i>
+          <div class="cart-num">8</div>
+        </div>
+        <i class="bi bi-list list-icon"></i>
+      </div>
+    </header>
+    <!-- END: header -->
+
+    <!-- START: main -->
+    <main>
+      <!-- Start: 會員中心導覽列 -->
+      <aside class="member-center-nav d-md-none col-12">
+        <ul class="member-center-list">
+          <li><a href="">會員資料</a></li>
+          <li><a href="">歷史訂單</a></li>
+          <li><a href="">點數紀錄</a></li>
+          <li><a href="">評論紀錄</a></li>
+          <li><a href="">優惠券</a></li>
+          <li><a href="">收藏商品</a></li>
+          |
+          <li class="active"><a href="">講師資料</a></li>
+          <li><a href="">文章管理</a></li>
+          <li><a href="">課程檢視</a></li>
+        </ul>
+      </aside>
+      <!-- End: 會員中心導覽列 -->
+      <h3 class="main-title">優惠券</h3>
+      <!-- Start: 優惠券列表 -->
+      <div class="main-content">
+        <!-- TODO: 覆蓋 select 標籤的 bs 屬性 -->
+        <div
+          class="coupon-status-area"
+        >
+          <div class="coupon-status">
+            <div class="status-indicator">所有優惠券</div>
+            <div><i class="bi bi-caret-down-fill"></i></div>
+          </div>
+          <ul class="d-none status-options">
+            <li class="status-option-0">所有優惠券</li>
+            <li class="status-option-1">未領取</li>
+            <li class="status-option-2">已領取</li>
+            <li class="status-option-3">已失效</li>
+          </ul>
+        </div>
+
+        <div class="coupon-card card-status-1">
+          <img class="coupon-img" src="./images/coupon-img1.svg" alt="" />
+          <div class="coupon-info">
+            <div class="d-flex justify-content-between align-items-start">
+              <div class="coupon-title fw-bold">品牌周年慶</div>
+              <button class="m-coupon-btn btn-skin">領取</button>
+            </div>
+            <div class="coupon-discount">$ 100</div>
+            <div class="coupon-description">
+              慶祝品牌周年慶送全站折價券 $ 100
+            </div>
+            <div class="coupon-detail">全店滿 $ 1000 可用，無期限</div>
+          </div>
+        </div>
+        <div class="coupon-card card-status-1">
+          <img class="coupon-img" src="./images/coupon-img2.svg" alt="" />
+          <div class="coupon-info">
+            <div class="d-flex justify-content-between align-items-start">
+              <div class="coupon-title fw-bold">生日禮</div>
+              <button class="m-coupon-btn btn-skin">領取</button>
+            </div>
+            <div class="coupon-discount">$ 100</div>
+            <div class="coupon-description">
+              生日快樂！！送您商品折價券 $ 100
+            </div>
+            <div class="coupon-detail">全店滿 $ 1000 可用，無期限</div>
+          </div>
+        </div>
+        <div class="coupon-card card-status-1">
+          <img class="coupon-img" src="./images/coupon-img3.svg" alt="" />
+          <div class="coupon-info">
+            <div class="d-flex justify-content-between align-items-start">
+              <div class="coupon-title fw-bold">限時領</div>
+              <button class="m-coupon-btn btn-skin">領取</button>
+            </div>
+            <div class="coupon-discount">$ 50</div>
+            <div class="coupon-description">限時一天 - 商品折價券 $ 50</div>
+            <div class="coupon-detail">全店滿 $ 1000 可用，無期限</div>
+          </div>
+        </div>
+        <div class="coupon-card card-status-2">
+          <img class="coupon-img" src="./images/coupon-img4.svg" alt="" />
+          <div class="coupon-info">
+            <div class="d-flex justify-content-between align-items-start">
+              <div class="coupon-title fw-bold">首購免運卷</div>
+            </div>
+            <div class="coupon-discount">$ 80</div>
+            <div class="coupon-description">首購運費折抵券 $ 80</div>
+            <div class="coupon-detail">全店滿 $ 1000 可用，無期限</div>
+          </div>
+        </div>
+        <div class="coupon-card card-status-2">
+          <img class="coupon-img" src="./images/coupon-img5.svg" alt="" />
+          <div class="coupon-info">
+            <div class="d-flex justify-content-between align-items-start">
+              <div class="coupon-title fw-bold">註冊禮</div>
+            </div>
+            <div class="coupon-discount">$ 100</div>
+            <div class="coupon-description">首次註冊送商品折價券 $ 100</div>
+            <div class="coupon-detail">全店滿 $ 1000 可用，無期限</div>
+          </div>
+        </div>
+        <div class="coupon-card card-status-2">
+          <img class="coupon-img" src="./images/coupon-img6.svg" alt="" />
+          <div class="coupon-info">
+            <div class="d-flex justify-content-between align-items-start">
+              <div class="coupon-title fw-bold">新年禮</div>
+            </div>
+            <div class="coupon-discount">$ 100</div>
+            <div class="coupon-description">
+              新年快樂！！送您商品折價券 $ 100
+            </div>
+            <div class="coupon-detail">全店滿 $ 1000 可用，無期限</div>
+          </div>
+        </div>
+        <div class="coupon-card card-status-3">
+          <img class="coupon-img" src="./images/coupon-img6.svg" alt="" />
+          <div class="coupon-info">
+            <div class="coupon-title d-flex justify-content-between">
+              <div class="fw-bold">新年禮</div>
+              |
+              <div>商品折價券 $ 100</div>
+            </div>
+            <div class="coupon-detail">已於 2024/01/02 00:00 過期</div>
+          </div>
+        </div>
+        <div class="coupon-card card-status-3">
+          <img class="coupon-img" src="./images/coupon-img6.svg" alt="" />
+          <div class="coupon-info">
+            <div class="coupon-title d-flex justify-content-between">
+              <div class="fw-bold">限時領</div>
+              |
+              <div>商品折價券 $ 50</div>
+            </div>
+            <div class="coupon-detail">已於 2024/12/31 00:00 過期</div>
+          </div>
+        </div>
+        <div class="coupon-card card-status-3">
+          <img class="coupon-img" src="./images/coupon-img6.svg" alt="" />
+          <div class="coupon-info">
+            <div class="coupon-title d-flex justify-content-between">
+              <div class="fw-bold">限時領</div>
+              |
+              <div>商品折價券 $ 80</div>
+            </div>
+            <div class="coupon-detail">已於 2024/12/26 00:00 使用</div>
+          </div>
+        </div>
+      </div>
+      <!-- End: 優惠券列表 -->
+    </main>
+    <!-- END: main -->
+
+    <!-- START: footer-->
+    <footer>
+      <img src="images/footer-logo-mobile.svg" alt="" />
+      <div class="footer-text">
+        © 2024 MR.BEAN COFFEE INC.ALL RIGHTS RESERVED
+      </div>
+      <div class="contact-icons">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-chat-dots"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-house-door-fill"></i>
+      </div>
+    </footer>
+    <!-- END: footer -->
+
+    <!-- START: nav -->
+    <nav>
+      <i class="bi bi-x-lg close-btn"></i>
+      <ul class="main-options">
+        <li class="product-category">
+          商品分類
+          <ul class="sub-options product-category-list">
+            <li>全部商品</li>
+            <li class="now">星巴克 STARBUCKS</li>
+            <li>藍瓶咖啡 BLUE BOTTLE COFFEE</li>
+            <li>皮爺咖啡 PEET'S COFFEE</li>
+            <li>嘉里咖啡 illycaffe</li>
+            <li>阿拉比卡 ％ARABICA</li>
+            <li>優仕咖啡 UCC</li>
+            <li>伯朗咖啡 MR. BROWN</li>
+            <li>路易莎 LOUISA COFFEE</li>
+            <li>咖碼咖啡 CAMA</li>
+            <li>熙舍精品咖啡</li>
+          </ul>
+        </li>
+        <li class="course-category">
+          課程專區
+          <ul class="sub-options course-category-list">
+            <li>全部課程</li>
+            <li>體驗課程</li>
+            <li>一般課程</li>
+            <li>SCA 證照課程</li>
+          </ul>
+        </li>
+        <li class="coffee-forem">
+          咖啡專欄
+          <ul class="sub-options coffee-forem-list">
+            <li>全部文章</li>
+            <li>基礎咖啡入門</li>
+            <li>手沖咖啡必讀</li>
+            <li>咖啡選豆指南</li>
+            <li>品味咖啡生活</li>
+            <li>咖啡器具相關</li>
+            <li>我的收藏文章</li>
+          </ul>
+        </li>
+        <li>關於我們</li>
+        <li>常見問題</li>
+      </ul>
+    </nav>
+    <!-- END: nav -->
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    const listIcon = document.querySelector(".list-icon");
+    const nav = document.querySelector("nav");
+    const body = document.querySelector("body");
+    const closeBtn = document.querySelector(".close-btn");
+
+    // START: offcanvas 開合設定
+    listIcon.addEventListener("click", (e) => {
+      nav.classList.add("active");
+      e.stopPropagation();
+    });
+    body.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+    nav.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+    closeBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      nav.classList.remove("active");
+    });
+
+    // START: 優惠券狀態選單設定
+    const couponStatus = document.querySelector(".coupon-status");
+    const statusIndicator = document.querySelector(".status-indicator");
+    const statusOptions = document.querySelector(".status-options");
+    const statusOption0 = document.querySelector(".status-option-0");
+    const statusOption1 = document.querySelector(".status-option-1");
+    const statusOption2 = document.querySelector(".status-option-2");
+    const statusOption3 = document.querySelector(".status-option-3");
+    const cardStatus1 = document.querySelectorAll(".card-status-1");
+    const cardStatus2 = document.querySelectorAll(".card-status-2");
+    const cardStatus3 = document.querySelectorAll(".card-status-3");
+
+    couponStatus.addEventListener("click", () => {
+      statusOptions.classList.toggle("d-none");
+    });
+
+    statusOption0.addEventListener("click", () => {
+      cardStatus1.forEach((v, i) => {
+        v.classList.remove("d-none");
+      });
+      cardStatus2.forEach((v, i) => {
+        v.classList.remove("d-none");
+      });
+      cardStatus3.forEach((v, i) => {
+        v.classList.remove("d-none");
+      });
+      statusOptions.classList.add("d-none");
+      statusIndicator.innerText = statusOption0.innerText;
+    });
+    statusOption1.addEventListener("click", () => {
+      cardStatus1.forEach((v, i) => {
+        v.classList.remove("d-none");
+      });
+      cardStatus2.forEach((v, i) => {
+        v.classList.add("d-none");
+      });
+      cardStatus3.forEach((v, i) => {
+        v.classList.add("d-none");
+      });
+      statusOptions.classList.add("d-none");
+      statusIndicator.innerText = statusOption1.innerText;
+    });
+    statusOption2.addEventListener("click", () => {
+      cardStatus1.forEach((v, i) => {
+        v.classList.add("d-none");
+      });
+      cardStatus2.forEach((v, i) => {
+        v.classList.remove("d-none");
+      });
+      cardStatus3.forEach((v, i) => {
+        v.classList.add("d-none");
+      });
+      statusOptions.classList.add("d-none");
+      statusIndicator.innerText = statusOption2.innerText;
+    });
+    statusOption3.addEventListener("click", () => {
+      cardStatus1.forEach((v, i) => {
+        v.classList.add("d-none");
+      });
+      cardStatus2.forEach((v, i) => {
+        v.classList.add("d-none");
+      });
+      cardStatus3.forEach((v, i) => {
+        v.classList.remove("d-none");
+      });
+      statusOptions.classList.add("d-none");
+      statusIndicator.innerText = statusOption3.innerText;
+    });
+  </script>
+</html>

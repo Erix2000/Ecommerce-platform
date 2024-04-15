@@ -1,0 +1,351 @@
+@import "@/styles/variables.scss";
+
+.comment-title {
+    color: $indigo-color;
+    text-align: flex-start;
+    margin: 80px 0px 30px 0px;
+    font-size: $h1;
+    border-left: 5px solid $skin-color;
+    letter-spacing: 4px;
+    padding: 0 0 0 16px;
+    // font-weight: $text-weight-block;
+    line-height: 50px;
+
+}
+
+.comment-table {
+    .w-15-percent {
+        width: 15%;
+    }
+
+    .w-35-percent {
+        width: 35%;
+    }
+
+    .w-45-percent {
+        width: 45%;
+    }
+
+    .w-5-percent {
+        width: 5%;
+    }
+
+    .t-head {
+        th {
+            font-size: $h4;
+        }
+    }
+
+    .t-body {
+        .comment-time {
+            font-size: $h5;
+
+        }
+
+        .comment-product {
+            font-size: $h5;
+        }
+
+        .comment-stars {
+            font-size: $h5;
+        }
+
+        .comment-text {
+            font-size: $h5;
+            margin-bottom: 8px;
+        }
+
+    }
+
+}
+
+.star {
+    color: $skin-color;
+    margin-right: 3px;
+    font-size: $h5;
+}
+
+.trash-btn {
+    cursor: pointer;
+    padding: 10px 15px 15px 15px;
+    font-size: $h5;
+
+    &:hover {
+        color: $light-red;
+    }
+
+}
+
+
+.mobile-size {
+    display: none;
+}
+
+
+
+.modal-head {
+    background: #fff;
+    // border-radius: 0px;
+    border: #fff solid 1px;
+
+    .modal-title {
+        font-size: $h2;
+        color: $indigo-color;
+    }
+}
+
+
+.modal-footer {
+    border: #fff solid 1px;
+    // border-radius: 0px;
+    background: #fff;
+
+    .modal-cancelBtn,.modal-cancelBtn:active {
+        background-color: $white-sec;
+        // border-radius: 0px;
+        border: #fff solid 1px;
+    }
+
+    .modal-deleteBtn,.modal-deleteBtn:active {
+        background-color: $light-red;
+        // border-radius: 0px;
+        border: #fff solid 1px;
+    }
+}
+
+
+
+.input-box-area {
+    display: flex;
+    justify-content: flex-end;
+    letter-spacing: 0.18rem;
+    font-size: $h4;
+
+    .input-box {
+        display: flex;
+
+        .custom-select {
+            // margin-right: 20px;
+            width: 180px;
+            text-align: center;
+            position: relative;
+
+            .custom-checkbox {
+                display: flex;
+                align-items: center;
+
+                & input {
+                    display: none;
+                }
+            }
+
+            .custom-options {
+                width: 180px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: none;
+                z-index: 99;
+            }
+
+            .selected {
+                // border-bottom: 2px solid $indigo-color;
+                background-color: $indigo-color;
+                color: $white-color;
+                padding: 5px 8px;
+                cursor: pointer;
+            }
+
+            .custom-option {
+                border-inline: 2px solid $indigo-color;
+                border-bottom: 2px solid $indigo-color;
+                ;
+                padding: 5px 10px;
+                background-color: $white-color;
+                cursor: pointer;
+            }
+
+            .custom-option:hover {
+                background-color: $indigo-color;
+                color: $white-color;
+            }
+
+            .checkmark {
+                position: relative;
+                height: 20px;
+                width: 20px;
+                border: 1px solid #003e52;
+                display: inline-block;
+            }
+
+            .custom-checkbox & input:checked+.checkmark::after {
+                content: '';
+                position: absolute;
+
+                left: 6px;
+                top: 2px;
+                width: 6px;
+                height: 12px;
+                border: solid $white-color;
+                border-width: 0 3px 3px 0;
+                transform: rotate(45deg);
+                background-color: transparent;
+            }
+
+            .custom-checkbox & input:checked+.checkmark {
+                background-color: $indigo-color;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .comment-table {
+        display: none;
+    }
+
+    .mobile-size {
+        display: flex;
+    }
+
+    .comment-title {
+        color: $indigo-color;
+        line-height: 30px;
+        text-align: flex-start;
+        margin: 20px 10px 10px 10px;
+        font-size: $h5;
+        border-left: 3px solid $skin-color;
+        padding: 0 0 0 8px;
+        font-weight: $text-weight-block;
+
+    }
+
+    .comment-first-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+
+        .comment-product {
+            color: $black-color;
+            font-weight: $text-weight-block ;
+            font-size: $h6;
+            margin-bottom: 0px;
+        }
+    }
+
+    .comment-stars {
+        margin: 0;
+    }
+
+    .star {
+        margin: 0 3px 0 0;
+        font-size: $h5;
+    }
+
+    .comment-time {
+        color: $white-sec;
+        margin: 0px;
+        padding: 0px;
+        text-align: flex-end;
+        font-size: $p;
+    }
+
+    .comment-text {
+        font-size: $h6;
+    }
+
+    .trash-btn {
+        font-size: $h5;
+        padding: 10px;
+        color: $light-red;
+
+        &:hover {
+            color: $light-red;
+        }
+
+    }
+
+    .input-box {
+        display: flex;
+
+        .custom-select {
+            // margin-right: 20px;
+            width: 180px;
+            text-align: center;
+            position: relative;
+
+            .custom-checkbox {
+                display: flex;
+                align-items: center;
+
+                & input {
+                    display: none;
+                }
+            }
+
+            .custom-options {
+                width: 180px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: none;
+                z-index: 99;
+
+            }
+
+            .selected {
+                font-size: $h6;
+                border-bottom: 2px solid $indigo-color;
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+
+            .custom-option {
+                border-inline: 2px solid $indigo-color;
+                border-bottom: 2px solid $indigo-color;
+                ;
+                padding: 5px 10px;
+                background-color: $white-color;
+                cursor: pointer;
+                font-size: $h6;
+            }
+
+            .custom-option:hover {
+                background-color: $indigo-color;
+                color: $white-color;
+            }
+
+            .checkmark {
+                position: relative;
+                height: 20px;
+                width: 20px;
+                border: 1px solid #003e52;
+                display: inline-block;
+            }
+
+            .custom-checkbox & input:checked+.checkmark::after {
+                content: '';
+                position: absolute;
+
+                left: 6px;
+                top: 2px;
+                width: 6px;
+                height: 12px;
+                border: solid $white-color;
+                border-width: 0 3px 3px 0;
+                transform: rotate(45deg);
+                background-color: transparent;
+            }
+
+            .custom-checkbox & input:checked+.checkmark {
+                background-color: $indigo-color;
+            }
+        }
+    }
+
+}

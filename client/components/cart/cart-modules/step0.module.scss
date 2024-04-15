@@ -1,0 +1,56 @@
+@import '@/styles/variables.scss';
+
+section.empty-cart-logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .image {
+    img {
+      height: 300px;
+      width: 300px;
+    }
+  }
+  .illustrate {
+    margin-top: -3rem;
+    font-size: $h2;
+  }
+  .direct-button {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    text-decoration: none;
+    background-color: $indigo-color;
+    color: $white-color;
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: $h4;
+    margin-inline: 0.5rem;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $skin-color;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  section.empty-cart-logo-group {
+    .image {
+      img {
+        height: 230px;
+        width: 230px;
+      }
+    }
+    .illustrate {
+      margin-top: -2.5rem;
+      font-size: $h3;
+    }
+    .direct-button {
+      width: 140px;
+      height: 50px;
+      font-size: $h5;
+      &:hover {
+        background-color: $indigo-color;
+      }
+    }
+  }
+}

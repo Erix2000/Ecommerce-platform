@@ -1,0 +1,128 @@
+// 顏色變數
+$indigo-color: #003e52;
+$skin-color: #bc955c;
+$white-color: #ffffff;
+$gray-color: #d9d9d9;
+$black-color: #000000;
+$white-sec: #b2acac;
+$skin-sec: #cdad80;
+$red: #940606;
+
+// 高度變數
+$nav-hight: 90px;
+$footer-hight: 355px;
+$main-padding: 20px;
+
+// 字體變數
+$main-font-family: "Noto Serif TC", serif;
+$text-weight-regular: 200;
+$text-weight-medium: 500;
+$text-weight-block: 700;
+$text-weight-black: 900;
+$h1: 32px;
+$h2: 24px;
+$h3: 20px;
+$h4: 18px;
+$h5: 16px;
+$h6: 14px;
+$p: 12px;
+$moblietext: 10px;
+
+// 字距變數
+$regular-spacing: 0.18rem;
+
+.comment-title {
+    color: $indigo-color;
+    text-align: start;
+    margin: 20px 0px 30px 0px;
+    font-size: $h1;
+    border-left: 5px solid $skin-color;
+    padding: 0 0 0 16px;
+
+}
+
+.table {
+    .w-15-percent {
+        width: 15%;
+    }
+
+    .w-35-percent {
+        width: 35%;
+    }
+
+    .w-45-percent {
+        width: 45%;
+    }
+
+    .w-5-percent {
+        width: 5%;
+    }
+
+    thead {
+        th {
+            font-size: $h3;
+        }
+    }
+
+    tbody {
+        th tr {
+            font-size: $h4;
+        }
+    }
+
+}
+
+.star {
+    color: $skin-color;
+}
+
+.trash-btn {
+    font-size: $h3;
+
+    :hover {
+
+        color: red;
+    }
+
+}
+
+.mobile-size {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+    table {
+        display: none;
+    }
+
+    .mobile-size {
+        display: flex;
+    }
+
+    .comment-first-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+
+        .comment-time {
+            color: $indigo-color;
+            margin: 0px;
+            text-align: center;
+        }
+
+    }
+
+    .comment-stars {
+        margin: 0;
+    }
+
+    .comment-product {
+        color: $indigo-color;
+        font-weight: $text-weight-block ;
+    }
+
+}

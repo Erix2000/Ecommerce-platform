@@ -1,0 +1,366 @@
+// 顏色變數
+$indigo-color: #003e52;
+$skin-color: #bc955c;
+$white-color: #ffffff;
+$gray-color: #d9d9d9;
+$black-color: #000000;
+$white-sec: #b2acac;
+$skin-sec: #cdad80;
+$red: #940606;
+
+// 高度變數
+$nav-hight: 90px;
+$footer-hight: 355px;
+$main-padding: 20px;
+
+// 字體變數
+$main-font-family: "Noto Serif TC", serif;
+$text-weight-regular: 200;
+$text-weight-medium: 500;
+$text-weight-block: 700;
+$text-weight-black: 900;
+$h1: 32px;
+$h2: 24px;
+$h3: 20px;
+$h4: 18px;
+$h5: 16px;
+$h6: 14px;
+$p: 12px;
+$moblietext: 10px;
+
+// 字距變數
+$regular-spacing: 0.18rem;
+
+// 簽到遊戲
+.calender-title {
+    color: $indigo-color;
+    text-align: start;
+    margin: 20px 0px 0px 0px;
+    font-size: $h1;
+    border-left: 5px solid $skin-color;
+    padding: 0 0 0 16px;
+}
+
+.calendar-container {
+    // background: #000;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 50px;
+
+
+}
+
+.calendar-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .calendar {
+        width: 453px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+
+        .calender-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $white-color;
+            color: $indigo-color;
+            padding: 10px;
+            width: 100%;
+
+            .month {
+                font-size: $h1;
+                color: $black-color;
+            }
+
+            .year {
+                font-size: $h2;
+                color: $black-color;
+            }
+        }
+
+        .weekdays {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #f2f2f2;
+            width: 100%;
+
+            .weekday {
+                width: calc(100% / 7);
+                text-align: center;
+                font-size: $h5;
+            }
+        }
+
+
+        .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            font-size: $h5;
+            width: 100%;
+
+            .day {
+                text-align: center;
+                border-radius: 50%;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                margin: auto;
+            }
+
+
+            .today {
+                font-weight: bold;
+            }
+
+            .signed {
+                color: $white-color;
+                background-color: $indigo-color;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+    }
+
+}
+
+// 簽到按鈕的樣式
+.sign-btn {
+    width: 160px;
+    height: 48px;
+    padding: 13px 0px 12px 0px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: auto;
+    background-color: $indigo-color;
+    color: $white-color;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+
+    &:hover {
+        background-color: $skin-color;
+        color: $white-color;
+    }
+
+    // 簽到按鈕被按了以後
+    &.signed {
+        display: flex;
+        width: 160px;
+        height: 48px;
+        padding: 13px 34px 12px 34px;
+        justify-content: center;
+        align-items: center;
+        background-color: $gray-color;
+        cursor: default;
+
+        &:hover {
+            background-color: $gray-color;
+        }
+    }
+
+}
+
+.activity {
+    margin: 30px;
+
+    .skin-big-size {
+        font-size: $h2;
+        color: $skin-color;
+    }
+
+    .med-size {
+        font-size: $h4;
+    }
+
+    p {
+        font-size: $h5;
+        margin: 5px 0;
+    }
+
+
+}
+
+.check-my-point {
+    text-align: end;
+    font-size: $h4;
+    margin-right: 50px;
+    margin-bottom: 20px;
+
+
+    .skin-big-size {
+        font-size: $h2;
+        color: $skin-color;
+    }
+
+}
+
+// 優惠卷卡片兌換
+.coupon-card {
+    position: relative;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+    margin-inline: 2rem;
+    padding: 0;
+    margin-bottom: 2rem;
+
+    img {
+        width: 148px;
+        height: 100%;
+    }
+
+    .coupon-group {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        padding-top: 1em;
+        justify-content: center;
+    }
+
+    .coupon-title {
+        color: $skin-color;
+        font-size: $h3;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+
+    .coupon-price {
+        color: $indigo-color;
+        font-size: $h5;
+        line-height: 15px;
+        letter-spacing: 1px;
+    }
+
+    .coupon-intro {
+        color: $gray-color;
+        font-size: $h6;
+        line-height: 15px;
+        letter-spacing: 1px;
+    }
+
+    .redeem-button {
+        background: $skin-color;
+        color: $white-color;
+        font-size: $h6;
+        position: absolute;
+        display: flex;
+        width: 65px;
+        padding: 5px 12px;
+        justify-content: center;
+        align-items: center;
+        top: 15px;
+        right: 15px;
+        text-decoration: none;
+    }
+
+}
+
+// 響應式設計
+@media screen and (max-width: 1200px) {
+    .calender-title {
+        font-size: $h3;
+        text-align: center;
+        border-left: 5px solid transparent;
+        padding: 0px;
+    }
+
+    .calendar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 0px 50px;
+    }
+
+    .activity {
+        // background-color: #ffa5a5;
+        padding: 10px 50px;
+        margin: auto;
+
+        .skin-big-size {
+            font-size: $h3;
+            color: $skin-color;
+        }
+
+        .med-size {
+            font-size: $h5;
+        }
+
+        p {
+            font-size: $h6;
+            margin: 5px 0;
+        }
+    }
+
+    .sign-btn {
+        padding: 0px;
+        font-size: $h5;
+
+        &.signed {
+            padding: 0px;
+            font-size: $h4;
+        }
+
+    }
+
+
+    .check-my-point {
+        text-align: center;
+        font-size: $h5;
+        margin: 10px 0px 10px 0px;
+
+
+        .skin-big-size {
+            font-size: $h5;
+            color: $skin-color;
+        }
+
+    }
+
+    .coupon-card {
+        box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+        margin-inline: 2rem;
+        padding: 0;
+        margin-bottom: 2rem;
+
+        img {
+            width: 120px;
+            height: 100%;
+        }
+    }
+
+    .coupon-group {
+
+        .coupon-title {
+            font-size: $h4;
+        }
+
+        .coupon-price {
+            font-size: $h6;
+        }
+
+        .coupon-intro {
+            font-size: $h6;
+        }
+
+        .redeem-button {
+            width: 50px;
+            height: 25px;
+            font-size: $p;
+            top: 10px;
+            right: 10px;
+        }
+    }
+}

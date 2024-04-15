@@ -1,0 +1,120 @@
+body {
+    font-family: 'Noto Serif TC', serif;;
+}
+
+.mainImg img {
+    width: 100%;
+}
+
+.courseText{
+    margin: auto;
+    padding: 48px;
+    
+}
+
+.textCenter{
+    display: flex;
+    justify-content:center ;
+    align-items:center ;
+
+}
+.textCenter p  {
+    justify-content: center;
+    margin: 20px 10px;
+}
+
+.textSmall{
+    font-size: 16px;
+}
+
+.textBlue{
+    color: #003E52;
+}
+
+.list-unstyled li {
+    padding: 5px 0;
+}
+
+.borderLeft {
+    border-left: 4px solid #BC955C;
+    padding-left: 10px;
+    color: #003E52;
+    font-size: 28px;
+}
+
+#offcanvasRight {
+    background-color: rgba(0, 62, 82, 0.90);
+    /* 淺藍色 */
+}
+
+.borderLeftOffcanvas {
+    border-left: 4px solid #BC955C;
+    padding-left: 10px;
+    color: #FFF;
+    font-size: 24px;
+}
+
+.textOffcanvas {
+    color: #FFF;
+    font-size: 24px;
+}
+
+.subTitle {
+    font-size: 24px;
+    color: #003E52;
+
+}
+
+.text {
+    font-size: 20px;
+}
+
+.star {
+    color: #BC955C;
+}
+
+.customerReview {
+    margin-bottom: 20px;
+}
+
+.dark {
+    width: 160px;
+    height: 48px;
+    padding: 13px 0px 12px 0px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: 10px auto;
+    background-color: #003E52;
+    color: #F0F0F0;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.light {
+    width: 160px;
+    height: 48px;
+    padding: 13px 0px 12px 0px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: 10px auto;
+    background-color: #BC955C;
+    color: #003E52;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+
+@media screen and (max-width: 1200px) {
+.courseText {
+    padding: 10px;
+
+
+    }
+    .mdNone{
+        display:none ;
+    }
+}

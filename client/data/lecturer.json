@@ -1,0 +1,49 @@
+{
+  "lecturers": [
+    {
+      "lecturer_id": "1",
+      "exclusive_code": "A7k8c6WmJb",
+      "lecturer_name": "徐上閔",
+      "lecturer_img": "https://randomuser.me/api/portraits/men/41.jpg",
+      "lecturer_expertise": "義式咖啡、拉花",
+      "lecturer_honor": "SCA 義式咖啡師專業級證照、SCA 咖啡萃取中級證照、澳大利亞國際咖啡烘焙賽 總冠軍&三冠王（台灣第一人）、2018 年 WCE 世界盃拉花大賽 (WLAC) 亞軍、2020 年 WCE 世界盃拉花大賽 (WLAC) 冠軍、歐洲精品咖啡協會 萃取與研磨三級認證｜SCAE Grinding&Brewing Professional、歐洲精品咖啡協會 感官三級認證｜SCAE Sensory Professional",
+      "lecturer_experience": ""
+    },
+    {
+      "lecturer_id": "2",
+      "exclusive_code": "P9R2z3bHwV",
+      "lecturer_name": "宋漾晴",
+      "lecturer_img": "https://randomuser.me/api/portraits/women/60.jpg",
+      "lecturer_expertise": "冰滴咖啡",
+      "lecturer_honor": "Barista 咖啡師-初/中/高、Brewing 金杯大師-初/中/高、Sensory 感官大師-初/中/高、Roasting 烘豆師-初/中/高、2020 RASV Champion Milk Based Coffee Presented、桔咖啡負責人暨講師、SCA AST國際精品咖啡協會授權考官2017 中國女神沖煮賽江西贛州站評審、2019 RASV澳大利亞國際咖啡烘焙賽 一銀二銅、2020 RASV澳大利亞國際咖啡烘焙賽 三金一銀、2020 RASV Champion International Roaster",
+      "lecturer_experience": ""
+    },
+    {
+      "lecturer_id": "3",
+      "exclusive_code": "Ll8jTmY2Rw",
+      "lecturer_name": "朱依禾",
+      "lecturer_img": "https://randomuser.me/api/portraits/women/67.jpg",
+      "lecturer_expertise": "單品咖啡鑑定",
+      "lecturer_honor": "2010 BGT烘焙大賽第季軍、2016大港盃咖啡烘焙交流賽主審長、2015 WCR 世界咖啡烘焙台灣選拔賽亞軍、2020 RASV Champion International Roaster",
+      "lecturer_experience": "2010 BGT烘焙大賽第季軍、2011 城市盃烘焙大賽冠軍、2013 GBC Barista 邀請賽國際評審、2014、2016大港盃咖啡烘焙交流賽主審長、2018年 大港盃咖啡烘焙交流賽評審總召、2017 雲南咖啡杯中國沖煮大賽 評審、澳大利亞國際咖啡烘焙賽 總冠軍&三冠王（台灣第一人）、2020 RASV Champion Espresso Presented、2020 RASV Champion Milk Based Coffee Presented"
+    },
+    {
+      "lecturer_id": "4",
+      "exclusive_code": "bDn9K2G7Xt",
+      "lecturer_name": "李文濤",
+      "lecturer_img": "https://randomuser.me/api/portraits/men/11.jpg",
+      "lecturer_expertise": "手沖咖啡",
+      "lecturer_honor": "2017 中國女神沖煮賽江西贛州站評審、2020 RASV澳大利亞國際咖啡烘焙賽 三金一銀、Barista Basics證照、SCA咖啡萃取師認證",
+      "lecturer_experience": "2021WCRC世界咖啡烘焙大賽季軍、SCAE歐洲精品咖啡協會訓練講師(AST)、SCAE歐洲精品咖啡協會文憑取得(CDS全球第49位，台灣第一位取得)、歐洲精品咖啡協會 烘焙三級認證｜SCAE Roasting Professional、歐洲精品咖啡協會 咖啡師三級認證｜SCAE BARISTA Professional"
+    },
+    {
+      "lecturer_id": "5",
+      "exclusive_code": "3YghT6nQZK",
+      "lecturer_name": "陳大大",
+      "lecturer_img": "https://randomuser.me/api/portraits/men/4.jpg",
+      "lecturer_expertise": "咖啡烘焙",
+      "lecturer_honor": "SCA咖啡生豆烘焙師認證、SCA咖啡種植師認證、2020 RASV Champion Espresso Presented、SCAA美國精品咖啡協會認證咖啡師、SCAA美國精品咖啡協會咖啡品鑑師認證M1M2、SCAA美國精品咖啡協會指導員(IDP)、SCA 精品咖啡協會認證講師&考官(CSP)、歐洲精品咖啡協會 生豆三級認證｜SCAE Green bean Professional、CQI國際咖啡品質鑑定師(Q Grader) 、SCENTONE 韓國風味品評師認證二級、SCENTONE 韓國風味品評講師&考官、CSC 美國咖啡科學認證 CSC-1",
+      "lecturer_experience": ""
+    }
+  ]
+}

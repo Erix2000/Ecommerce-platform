@@ -1,0 +1,226 @@
+// 顏色變數
+$indigo-color: #003e52;
+$skin-color: #bc955c;
+$white-color: #ffffff;
+$grey-color: #d9d9d9;
+$deep-grey-color: rgb(205, 205, 205);
+
+$black-color: #000000;
+$white-sec: #b2acac;
+$skin-sec: #cdad80;
+$red: #940606;
+
+// 高度變數
+$nav-hight: 90px;
+$footer-hight: 355px;
+$main-padding: 20px;
+
+// 字體變數
+$main-font-family: "Noto Serif TC", serif;
+$text-weight-regular: 200;
+$text-weight-medium: 500;
+$text-weight-block: 700;
+$text-weight-black: 900;
+$h1: 32px;
+$h2: 24px;
+$h3: 20px;
+$h4: 18px;
+$h5: 16px;
+$h6: 14px;
+$p: 12px;
+$moblietext: 10px;
+
+// 字距變數
+$regular-spacing: 0.18rem;
+
+main {
+  min-height: calc(100vh - 90px - 355px);
+  section.proccess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    .proccess-step {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      .proccess-circle {
+        margin-inline: 2rem;
+        width: 50px;
+        height: 50px;
+        background-color: $indigo-color;
+        border-radius: 50%;
+        .step-num {
+          line-height: 50px;
+          color: $white-color;
+        }
+      }
+      .step-title {
+        padding-top: 1rem;
+      }
+    }
+
+    .proccess-line {
+      width: 270px;
+      height: 10px;
+      background-color: $indigo-color;
+      margin-bottom: 3.5rem;
+    }
+    .proccess-iconM {
+      display: none;
+    }
+  }
+
+  .not-this-proccess {
+    background-color: $grey-color !important;
+    .step-num {
+      color: $indigo-color !important;
+    }
+  }
+  section.cart-success {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .icon {
+      font-size: 80px;
+    }
+    p {
+      padding-top: 1rem;
+
+      font-size: $h3;
+    }
+  }
+
+  section.summary-info {
+    width: 800px;
+    .title {
+      font-size: $h1;
+      margin-block: 3rem;
+      border-left: 5px solid $indigo-color;
+      padding-left: 1rem;
+      margin-left: -1.5rem;
+    }
+    .row {
+      font-size: $h2;
+      margin-block: 1rem;
+    }
+    .bottom {
+      margin-bottom: 5rem;
+    }
+  }
+  section.direct {
+    margin-bottom: 5rem;
+
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    .direct-button {
+      text-decoration: none;
+      width: 160px;
+      height: 50px;
+      text-align: center;
+      line-height: 44px;
+      font-size: $h4;
+      margin-inline: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    .go-check {
+      border: 3px solid $indigo-color;
+      color: $indigo-color;
+    }
+    .go-product {
+      border: 3px solid $indigo-color;
+
+      background-color: $indigo-color;
+      color: $white-color;
+      &:hover {
+        background-color: $skin-color;
+        border: 3px solid $skin-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  main {
+    max-width: 390px !important;
+
+    section.proccess {
+      .proccess-circle {
+        font-size: $h6;
+
+        width: 37px !important;
+        height: 37px !important;
+        .step-num {
+          line-height: 37px !important;
+        }
+      }
+      .proccess-line {
+        display: none;
+      }
+      .proccess-iconM {
+        display: block;
+        font-size: $h3;
+        font-weight: $text-weight-black;
+        margin-top: -3rem;
+      }
+      .step-title {
+        font-size: $p;
+      }
+    }
+    section.cart-success {
+      .icon {
+        font-size: 70px;
+      }
+      p {
+        font-size: $h4;
+      }
+    }
+    section.summary-info {
+      width: 430px;
+      .title {
+        margin-left: 0rem;
+
+        font-size: $h2;
+      }
+      .row {
+        font-size: $h5;
+      }
+      .bottom {
+        margin-bottom: 3rem;
+      }
+    }
+    section.direct {
+      // margin-top: 1rem;
+      // display: flex;
+      // justify-content: center;
+      margin-bottom: 3rem;
+
+      .direct-button {
+        // text-decoration: none;
+        width: 140px;
+        height: 43px;
+        text-align: center;
+        line-height: 36px;
+        font-size: $h6;
+        margin-inline: 0.5rem;
+        transition: all 0.3s ease;
+      }
+      .go-check {
+        border: 3px solid $indigo-color;
+        color: $indigo-color;
+      }
+      .go-product {
+        border: 3px solid $indigo-color;
+
+        background-color: $indigo-color;
+        color: $white-color;
+        &:hover {
+          background-color: $indigo-color;
+          border: 3px solid $indigo-color;
+        }
+      }
+    }
+  }
+}

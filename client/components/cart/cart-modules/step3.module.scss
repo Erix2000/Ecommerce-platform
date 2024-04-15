@@ -1,0 +1,154 @@
+@import '@/styles/variables.scss';
+
+section.cart-success {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  .icon {
+    font-size: 80px;
+  }
+  .success-info {
+    padding-top: 1rem;
+
+    font-size: $h3;
+  }
+  .payment-success {
+    color: $grey-deep-color;
+    font-size: $h4;
+  }
+}
+
+section.summary-info {
+  width: 800px;
+  margin-bottom: 4.5rem;
+  .title {
+    font-size: $h1;
+    margin-block: 3rem;
+    border-left: 5px solid $indigo-color;
+    padding-left: 1rem;
+    margin-left: -1.5rem;
+  }
+  .row {
+    font-size: $h2;
+    margin-block: 1rem;
+  }
+  .information {
+    display: flex;
+    margin-bottom: 1rem;
+    .information-title {
+      flex: 3;
+    }
+    .information-content {
+      flex: 12;
+      .status-ok {
+        color: $indigo-color;
+      }
+      .status-none {
+        color: $red;
+      }
+    }
+  }
+  .bottom {
+    margin-bottom: 5rem;
+  }
+}
+section.direct {
+  margin-bottom: 5rem;
+
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  .direct-button {
+    text-decoration: none;
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    line-height: 44px;
+    font-size: $h4;
+    margin-inline: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  .go-check {
+    border: 3px solid $indigo-color;
+    color: $indigo-color;
+  }
+  .go-product {
+    border: 3px solid $indigo-color;
+
+    background-color: $indigo-color;
+    color: $white-color;
+    &:hover {
+      background-color: $skin-color;
+      border: 3px solid $skin-color;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section.cart-success {
+    .icon {
+      font-size: 70px;
+    }
+    .success-info {
+      font-size: $h3;
+    }
+    .payment-success {
+      font-size: $h6;
+    }
+  }
+  section.summary-info {
+    width: 390px;
+    margin-bottom: 2rem;
+
+    .title {
+      margin-left: 0rem;
+      margin-block: 1rem;
+
+      font-size: $h2;
+    }
+    .row {
+      font-size: $h5;
+    }
+    .information {
+      font-size: $h5;
+      margin-left: 1.5rem;
+      .information-title {
+        flex: 5;
+      }
+      .information-content {
+        flex: 12;
+      }
+    }
+    .bottom {
+      margin-bottom: 3rem;
+    }
+  }
+  section.direct {
+    margin-bottom: 3rem;
+
+    .direct-button {
+      width: 140px;
+      height: 43px;
+      text-align: center;
+      line-height: 36px;
+      font-size: $h6;
+      margin-inline: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    .go-check {
+      border: 3px solid $indigo-color;
+      color: $indigo-color;
+    }
+    .go-product {
+      border: 3px solid $indigo-color;
+
+      background-color: $indigo-color;
+      color: $white-color;
+      &:hover {
+        background-color: $indigo-color;
+        border: 3px solid $indigo-color;
+      }
+    }
+  }
+}

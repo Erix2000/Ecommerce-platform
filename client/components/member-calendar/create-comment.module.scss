@@ -1,0 +1,275 @@
+@import "@/styles/variables.scss";
+
+.alert-title {
+    color: $light-red;
+    font-size: $h2;
+    margin-block: 20px;
+}
+
+.alert-backBtn {
+    padding-block: 10px;
+    padding-inline: 38px;
+    color: $white-color;
+    background: $indigo-color;
+    text-decoration: none;
+    border: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.comment-title {
+    color: $indigo-color;
+    text-align: flex-start;
+    margin: 20px 0px 30px 0px;
+    font-size: $h1;
+    border-left: 5px solid $skin-color;
+    letter-spacing: 2.7px;
+    padding: 0 0 0 16px;
+    font-weight: $text-weight-block;
+    line-height: 50px;
+}
+
+.comment-box {
+    max-width: 100%; // 設定最大寬度以保持內容的可讀性
+    margin: 0 auto; // 水平置中
+
+    .order-detail {
+        display: flex;
+        flex-direction: row; // 水平布局
+        align-items: center; // 垂直居中對齊
+        margin-bottom: 20px;
+        margin-left: 30px;
+        ;
+
+        .order-img {
+            width: 150px; // 商品圖片大小
+            height: 100%;
+            margin-right: 20px; // 與右側內容的間距
+            object-fit: cover; // 保持圖片比例
+        }
+
+    }
+}
+
+.product-info {
+    ul {
+        list-style-type: none; // 移除項目符號
+        padding: 0; // 移除預設padding
+        margin: 0; // 移除預設margin
+
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    .order-title {
+        color: $indigo-color;
+        font-size: $h2;
+        font-weight: 700;
+
+        .order-link {
+            text-decoration: none;
+            color: $indigo-color;
+            font-size: $h2;
+        }
+    }
+
+    .order-text {
+        color: $black-color;
+        font-size: $h4;
+    }
+
+    .order-price {
+        color: $black-color;
+        font-size: $h3;
+    }
+}
+
+.comment-container {
+    max-width: 95%;
+    margin: 0 auto;
+
+    .comment-label {
+        font-size: $h3;
+    }
+}
+
+.input-area {
+    border-radius: 0px;
+    outline: none !important;
+    box-shadow: none !important;
+
+    &:focus {
+        outline: 1px solid $skin-color !important;
+        border: 0.5px solid $skin-color !important
+    }
+}
+
+.submit-comment {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+        margin-block: 1.2rem;
+        padding-block: 10px;
+        padding-inline: 38px;
+        color: $white-color;
+        text-decoration: none;
+        border: 0;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .submit {
+        background-color: $indigo-color;
+    }
+
+    .submit:hover {
+        background-color: $skin-color;
+    }
+}
+
+.star-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: $h3;
+}
+
+.modal-head {
+    background: #fff;
+    // border-radius: 0px;
+    border: #fff solid 1px;
+
+    .modal-title {
+        font-size: $h2;
+        color: $indigo-color;
+    }
+}
+
+
+.modal-footer {
+    border: #fff solid 1px;
+    // border-radius: 0px;
+    background: #fff;
+
+    .modal-backBtn,.modal-backBtn:active {
+        background-color: $skin-color;
+        // border-radius: 0px;
+        border: #fff solid 1px;
+        font-size: $h4;
+    }
+
+    .modal-shopBtn,.modal-shopBtn:active {
+        background-color: $indigo-color;
+        // border-radius: 0px;
+        border: #fff solid 1px;
+        font-size: $h4;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .alert-title {
+        color: $light-red;
+        font-size: $h4;
+        margin-block: 20px;
+    }
+
+    .alert-backBtn {
+        font-size: $h5;
+        padding-block: 10px;
+        padding-inline: 20px;
+        color: $white-color;
+        background: $indigo-color;
+        text-decoration: none;
+        border: 0;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .comment-title {
+        color: $indigo-color;
+        line-height: 30px;
+        text-align: flex-start;
+        margin: 20px 10px 20px 0px;
+        font-size: $h5;
+        border-left: 3px solid $skin-color;
+        padding: 0 0 0 8px;
+    }
+
+    .comment-box {
+        .order-detail {
+            margin-bottom: 5px;
+            margin-left: 10px;
+
+            .order-img {
+                width: 70px; // 商品圖片大小
+                margin-right: 15px; // 與右側內容的間距
+
+            }
+
+        }
+    }
+
+    .product-info {
+        ul {
+            li {
+                margin-bottom: 3px;
+            }
+        }
+
+        .order-title {
+            font-size: $h5;
+
+            .order-link {
+                font-size: $h5;
+            }
+        }
+
+        .order-text {
+            font-size: $h6;
+        }
+
+        .order-price {
+            font-size: $h6;
+        }
+    }
+
+    .comment-container {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .comment-label {
+        display: none;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            margin-block: 0.8rem;
+            padding-block: 8px;
+            padding-inline: 25px;
+            font-size: $h6;
+        }
+
+        .submit {
+            background-color: $indigo-color;
+        }
+
+        .submit:hover {
+            background-color: $indigo-color;
+        }
+    }
+
+}

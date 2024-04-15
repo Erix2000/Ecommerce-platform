@@ -1,0 +1,170 @@
+main {
+  .main-content {
+    .main-content-content {
+      .order-status-folder {
+        font-size: 22px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px #000 solid;
+        padding: 5px 10px;
+        margin-bottom: 8px;
+      }
+      .order-card {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        font-size: 1rem;
+        border-bottom: 1px solid var(--gray);
+        .order-img {
+          width: 120px;
+          height: 120px;
+        }
+        .order-detail {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          padding-left: 8px;
+          .order-info {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+            margin-inline-end: 10px;
+            & span {
+              margin-inline-start: 3px;
+            }
+          }
+          .product-info {
+            display: flex;
+            flex-grow: 1;
+            & ul {
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              font-size: 1rem;
+              list-style: none;
+              padding-inline: 0;
+              margin: 0;
+              flex-grow: 1;
+            }
+            & div {
+              display: flex;
+              align-items: start;
+              gap: 10px;
+            }
+          }
+        }
+        .order-options {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    }
+  }
+}
+.order-status-1 {
+  color: #ff0000;
+}
+.order-status-2 {
+  color: #003e52;
+}
+.order-status-3 {
+  color: #d9d9d9;
+}
+.order-status-4 {
+  color: #bc955c;
+}
+.order-status-5 {
+  color: #000000;
+}
+.page-button {
+  font-size: 0.75rem;
+  text-wrap: nowrap;
+  color: #ffffff;
+  background-color: #003e52;
+  border: 1px #bc955c solid;
+  font-weight: 500;
+  padding-inline: 15px;
+  padding-block: 3px;
+  align-self: end;
+}
+/* START: 訂單詳細頁 */
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  .detail {
+    font-size: 1.25rem;
+    display: flex;
+    gap: 28px;
+    .detail-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-align: justify;
+      text-align-last: justify;
+      width: 80px;
+    }
+    .detail-content {
+      flex-grow: 1;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  main {
+    .main-content {
+      .main-content-content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .order-card {
+          font-size: 0.75rem;
+          padding: 0;
+          margin-bottom: 5px;
+          .order-img {
+            width: 55px;
+            height: 55px;
+          }
+          .order-detail {
+            padding-left: 5px;
+            gap: 0;
+            .order-info {
+              margin-inline-end: 0;
+            }
+            .product-info {
+              & ul {
+                font-size: 0.625rem;
+              }
+              & > div {
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: end;
+              }
+            }
+          }
+          .order-options {
+            gap: 5px;
+            justify-content: end;
+          }
+        }
+      }
+    }
+  }
+  .details {
+    .detail {
+      font-size: 0.75rem;
+      gap: 10px;
+      .detail-title {
+        font-size: 0.75rem;
+        font-weight: 600;
+        width: 50px;
+      }
+      .detail-content {
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "coupon_id": 1,
+    "coupon_name": "滿千折百",
+    "coupon_intro": "介紹介紹介紹介紹介紹介紹介紹介紹",
+    "coupon_discount": 100,
+    "coupon_img": "birthday.png",
+    "coupon_threshold": 1000,
+    "user_id": 1
+  },
+  {
+    "coupon_id": 2,
+    "coupon_name": "不限金額折10元",
+    "coupon_intro": "介紹介紹介紹介紹介紹介紹介紹介紹",
+
+    "coupon_img": "birthday.png",
+    "coupon_discount": 10,
+    "coupon_threshold": 0,
+    "user_id": 1
+  },
+  {
+    "coupon_id": 3,
+    "coupon_name": "入會滿500禮折60",
+    "coupon_intro": "介紹介紹介紹介紹介紹介紹介紹介紹",
+
+    "coupon_discount": 60,
+    "coupon_img": "box.png",
+    "coupon_threshold": 500,
+    "user_id": 1
+  },
+  {
+    "coupon_id": 4,
+    "coupon_name": "滿萬折千",
+    "coupon_discount": 1000,
+    "coupon_intro": "介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹",
+
+    "coupon_img": "box.png",
+    "coupon_threshold": 10000,
+    "user_id": 1
+  }
+]

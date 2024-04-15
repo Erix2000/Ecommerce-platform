@@ -1,0 +1,26 @@
+[
+    {
+        "brand_id":"00",
+        "brand_name":"全部品牌",
+        "brand_name_en":"",
+        "brand_img":""
+    },
+    {
+        "brand_id":"01",
+        "brand_name":"星巴克",
+        "brand_name_en":"STARBUCKS",
+        "brand_img":"[1.jpg,2.jpg]"
+    },
+    {
+        "brand_id":"02",
+        "brand_name":"藍瓶咖啡",
+        "brand_name_en":"BLUE BOTTLE COFFEE",
+        "brand_img":"[1.jpg,2.jpg]"
+    },
+    {
+        "brand_id":"03",
+        "brand_name":"皮爺咖啡",
+        "brand_name_en":"PEET'S COFFEE",
+        "brand_img":"[1.jpg,2.jpg]"
+    }
+]

@@ -1,0 +1,726 @@
+// 顏色變數
+$indigo-color: #003e52;
+$skin-color: #bc955c;
+$white-color: #ffffff;
+$gray-color: #d9d9d9;
+$black-color: #000000;
+$white-sec: #b2acac;
+$skin-sec: #cdad80;
+$red: #940606;
+
+// 高度變數
+$nav-hight: 90px;
+$footer-hight: 355px;
+$main-padding: 20px;
+
+// 字體變數
+$main-font-family: "Noto Serif TC", serif;
+$text-weight-regular: 200;
+$text-weight-medium: 500;
+$text-weight-block: 700;
+$text-weight-black: 900;
+$h1: 32px;
+$h2: 24px;
+$h3: 20px;
+$h4: 18px;
+$h5: 16px;
+$h6: 14px;
+$p: 12px;
+$moblietext: 10px;
+
+// 字距變數
+$regular-spacing: 0.18rem;
+
+/* START: 共用組件 */
+/* START: 按鈕 */
+.m-page-btn {
+  width: 160px;
+  padding-block: 5px;
+  font-size: 0.75rem;
+  text-wrap: nowrap;
+  font-weight: 500;
+  border: none;
+}
+.m-content-btn {
+  padding-inline: 15px;
+  padding-block: 3px;
+  font-size: 0.75rem;
+  border: none;
+}
+.m-coupon-btn {
+  padding-inline: 11px;
+  padding-block: 2px;
+  font-size: 0.625rem;
+  letter-spacing: 1.8px;
+  border: none;
+}
+/* NEWREVISE: 新增電腦版按鈕尺寸樣式 */
+.d-page-btn {
+  padding-block: 5px;
+  padding-inline: 20px;
+  font-size: 1rem;
+  border: none;
+}
+.d-content-btn {
+  padding-block: 3px;
+  padding-inline: 15px;
+  font-size: 0.75rem;
+  border: none;
+}
+/* NEWREVISE: 新增電腦版按鈕尺寸樣式 */
+.btn-indigo {
+  color: #fff;
+  background-color: $indigo-color;
+}
+.btn-skin {
+  color: #fff;
+  background-color: $skin-color;
+}
+.btn-gray {
+  color: #000;
+  background-color: $gray-color;
+}
+
+* {
+  font-family: $main-font-family;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* NEWREVISE: 加上 display:flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; */
+html,
+body {
+  position: relative;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+/* NEWREVISE: 加上 display:flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; */
+
+// 手機版 430
+@media screen and (max-width: 576px) {
+  .header {
+    height: 66px !important;
+    padding-inline: 10px;
+
+    & img {
+      height: 48px !important;
+      width: 110px !important;
+    }
+
+    .nav {
+      justify-content: space-between !important;
+      height: 66px !important;
+    }
+
+    .list-icon {
+      display: block !important;
+      font-size: 35px;
+      margin-left: 25px;
+    }
+
+    .header-ul {
+      display: none;
+    }
+
+    .header-icon {
+      padding-right: 0 !important;
+      font-size: 20px !important;
+
+      .cart-num {
+        width: 12px !important;
+        height: 12px !important;
+        font-size: 6px !important;
+        top: 12px !important;
+        left: 3px;
+      }
+    }
+  }
+
+  .aside {
+    display: none;
+  }
+
+  // 手機版側邊欄 開始
+  .nav-m {
+    display: block !important;
+    color: $white-color;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 340px;
+    height: 100vh;
+    background-color: #003e52e6;
+    backdrop-filter: blur(5px);
+    transition: 0.5s all;
+    overflow: scroll;
+    scrollbar-width: none;
+    font-weight: $text-weight-regular;
+    letter-spacing: $regular-spacing;
+    z-index: 6;
+
+    &.nav-active {
+      position: fixed;
+      left: calc(100% - 340px);
+      overflow: scroll;
+    }
+
+    .close-btn {
+      font-size: 25px;
+      line-height: 0;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: 20px;
+      top: 20px;
+    }
+    .main-options {
+      font-size: 16px;
+      padding-top: 100px;
+      padding-left: 35px;
+      list-style: none;
+      & li {
+        padding-bottom: 25px;
+      }
+      .sub-options {
+        font-size: 14px;
+        padding-top: 25px;
+        padding-left: 0px;
+        list-style: none;
+        & li.now {
+          color: $skin-color;
+        }
+      }
+    }
+  }
+  // 手機版側邊欄 結束
+
+  // 手機板的上方條 開始
+  .member-center-nav {
+    width: 100%;
+    overflow: scroll;
+    /* NEWREVISE: "margin-top:66px;" 刪除 */
+    scrollbar-width: none;
+    color: $indigo-color;
+
+    .member-center-list {
+      width: 660px;
+      list-style: none;
+      display: flex;
+      /* NEWREVISE: align-items: center; 刪除 */
+      margin: 0;
+      padding: 0;
+
+      & li {
+        font-size: 12px;
+        font-weight: $text-weight-medium;
+        padding-inline: 9px;
+        height: 31px;
+        letter-spacing: 2.2px;
+        text-wrap: nowrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .li-active {
+          color: $skin-color;
+          /* NEWREVISE: 顏色修正 skin --> indigo */
+          border-bottom: 1px $indigo-color solid;
+        }
+      }
+
+      li:hover {
+        color: $skin-color;
+      }
+    }
+  }
+
+  // 手機板的上方條 結束
+}
+
+// 提前換footer
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 160px !important;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .main-footer {
+      margin: 0 !important;
+      padding: 0 0 10px 0 !important;
+    }
+
+    .footer-logo {
+      display: flex;
+      gap: 10px;
+      /* flex-direction: column; */
+      justify-content: center;
+
+      & img {
+        height: 44px;
+        width: 44px !important;
+      }
+    }
+
+    & p {
+      letter-spacing: 1.5px;
+      font-size: 8px;
+      margin-bottom: 0;
+    }
+
+    .footer-ul {
+      display: none !important;
+    }
+
+    .contact-icons {
+      display: block !important;
+      display: flex !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      font-size: 14px;
+    }
+  }
+}
+
+// 手機版側邊攔消失
+.nav-m {
+  display: none;
+}
+
+// header
+.header {
+  height: $nav-hight;
+  background-color: $white-color;
+  color: $indigo-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+  img {
+    width: 130px;
+  }
+
+  .header-icon {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 60px;
+
+    .list-icon {
+      display: none;
+    }
+
+    .cart-num {
+      line-height: 0;
+      width: 20px;
+      height: 20px;
+      font-size: 14px;
+      position: absolute;
+      top: -3px;
+      right: 50px;
+      background-color: $red;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white-color;
+    }
+
+    & span {
+      margin: 0 6px;
+    }
+  }
+
+  // 導航欄樣式
+  .nav {
+    height: $nav-hight;
+    max-width: 1440px;
+    margin: auto;
+    background-color: $white-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+
+    ul {
+      height: 100%;
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 0px;
+    }
+
+    /* 導航連結樣式 */
+    .header-ul {
+      height: 100%;
+      color: $indigo-color;
+      margin-bottom: -1rem;
+
+      font-size: $h3;
+      font-weight: $text-weight-medium;
+      letter-spacing: $regular-spacing;
+
+      .nav-links {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .nav-li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        // padding: 2rem;
+
+        .menu-link {
+          display: flex;
+          flex-direction: row;
+          // height: 27px;
+        }
+      }
+      .nav-li > a {
+        height: 100%;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+
+    /* 導航圖標樣式 */
+    .header-icon {
+      font-size: $h2;
+    }
+  }
+
+  // nav底下的圓點
+  .nav-dot {
+    display: none;
+  }
+
+  .nav-link:hover .nav-dot,
+  .nav-link:focus .nav-dot {
+    display: block !important;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $skin-color;
+    margin-inline: auto;
+    margin-top: 8px;
+    transition: 1s;
+  }
+
+  // 下拉選單
+  .brand-menu,
+  .class-menu,
+  .article-menu {
+    display: none;
+    position: absolute;
+    top: 83px;
+    left: 0;
+  }
+
+  .product-link:hover .brand-menu,
+  .class-link:hover .class-menu,
+  .article-link:hover .article-menu {
+    display: block !important;
+  }
+
+  // 當滑鼠移到下拉選單，依然hover
+  .product-link:hover .nav-link,
+  .class-link:hover .nav-link,
+  .article-link:hover .nav-link {
+    color: $skin-color;
+  }
+  .product-link:hover .nav-dot,
+  .class-link:hover .nav-dot,
+  .article-link:hover .nav-dot {
+    display: block !important;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $skin-color;
+    margin-inline: auto;
+    margin-top: 8px;
+    transition: 1s;
+  }
+
+  // 下拉選單裡面的圓點
+  .menu-dot {
+    display: none;
+  }
+
+  .header-mainmenu {
+    .menu-link {
+      display: flex;
+      align-items: center;
+      font-size: $h4;
+      color: $white-color;
+    }
+
+    .menu-link:hover {
+      color: $skin-color;
+    }
+
+    .menu-link:hover .menu-dot {
+      display: inline-block !important;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $skin-color;
+      margin-right: 15px;
+      margin-block: auto;
+      transition: 1s;
+    }
+  }
+}
+
+// header結束
+
+// 主要區域
+.main {
+  background-color: $white-color;
+  max-width: 1440px;
+  margin-top: $nav-hight;
+  padding-inline: 20px;
+  font-weight: $text-weight-medium;
+
+  // 側邊欄樣式
+  .aside {
+    background-color: $white-color;
+    padding-block: $main-padding;
+    padding-inline: 20px;
+    min-width: 15vw;
+    color: $indigo-color;
+    font-size: $h5;
+    letter-spacing: $regular-spacing;
+
+    .bread {
+      margin-bottom: $main-padding;
+      font-size: 15px;
+      text-align: left;
+    }
+
+    & ul {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    & li {
+      & a {
+        display: flex;
+        align-items: center;
+        margin-bottom: $main-padding;
+        font-size: $h4;
+      }
+    }
+
+    .link:hover .aside-dot {
+      display: inline-block !important;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $skin-color;
+      margin-right: 15px;
+      margin-block: auto;
+      transition: 1s;
+    }
+
+    .link:focus .aside-dot {
+      display: inline-block !important;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $skin-color;
+      margin-right: 15px;
+      margin-block: auto;
+      transition: 1s;
+    }
+
+    .aside-dot {
+      display: none;
+    }
+
+    /* 按鈕組樣式 */
+    .btn-group {
+      margin-block: 50px;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        margin-block-start: 20px;
+        width: 100%;
+        padding-block: 7px;
+        color: $white-color;
+        background-color: $indigo-color;
+        text-decoration: none;
+        letter-spacing: $regular-spacing;
+      }
+
+      .aside-button1 {
+        background-color: $skin-color;
+        border: 2px solid;
+        color: $white-color;
+      }
+
+      .aside-button2 {
+        background-color: $gray-color;
+        border: 2px solid;
+        color: $white-color;
+      }
+
+      .aside-button1:hover {
+        background-color: $white-color;
+        border: 2px solid $skin-color;
+        color: $indigo-color;
+      }
+
+      .aside-button2:hover {
+        background-color: $white-color;
+        border: 2px solid $gray-color;
+        color: $indigo-color;
+      }
+    }
+  }
+
+  // 側邊欄結束
+
+  .content {
+    padding-block: $main-padding;
+  }
+}
+
+/* NEWREVISE: 新增手機板 main 元素的 css */
+/* START: 手機板 main */
+@media screen and (max-width: 576px) {
+  .main {
+    margin-top: 66px;
+    padding: 0;
+    flex-grow: 1;
+    .main-title {
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 2.7px;
+      color: var(--indigo);
+      padding-left: 20px;
+      padding-block: 10px;
+      margin: 0;
+    }
+    .content {
+      padding-inline: 50px;
+      padding-block: 10px;
+    }
+  }
+}
+/* NEWREVISE: 新增手機板 main 元素的 css */
+
+// 主要區域結束
+
+// 區塊內標題
+.aside-title {
+  font-size: $h3;
+  margin-bottom: $main-padding;
+}
+
+.aside-sectitle {
+  margin-top: $main-padding;
+  font-size: $h4;
+}
+
+.aside-thrtitle {
+  margin-top: $main-padding;
+  margin-bottom: 13px;
+  font-size: $h4;
+}
+
+.form-check {
+  margin-bottom: 7px;
+  font-size: $h5;
+}
+
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+// 鏈接樣式
+.link {
+  transition: background-color 0.3s ease;
+  color: $indigo-color;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: $skin-color;
+}
+
+.link:active {
+  color: $skin-color;
+}
+
+.link:focus-within {
+  color: $skin-color;
+}
+
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+.remove {
+  display: none;
+}
+
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+// 彈出選單
+.header-mainmenu {
+  width: 400px;
+  background-color: #003e52ef;
+  color: $white-color;
+  font-size: $h4;
+  font-weight: $text-weight-regular;
+  padding: 20px;
+
+  ul {
+    li {
+      margin: 10px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    li:hover {
+      color: $skin-sec;
+    }
+  }
+}
+
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+// 頁尾樣式
+.footer {
+  background-color: $black-color;
+  height: $footer-hight;
+  color: $white-color;
+  font-weight: $text-weight-regular;
+  font-size: $h6;
+  letter-spacing: $regular-spacing;
+
+  .main-footer {
+    margin: auto;
+    max-width: 1440px;
+    padding: 48px;
+    justify-content: center;
+
+    .footer-logo {
+      width: 130px;
+    }
+  }
+
+  ul {
+    margin-left: 20px;
+  }
+
+  .contact-icons {
+    display: none;
+  }
+}

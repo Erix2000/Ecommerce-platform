@@ -1,0 +1,842 @@
+@import '@/styles/variables.scss';
+//loader
+.loader-container {
+  background-color: rgba(159, 159, 159, 0.15);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// custom-checkbox開始
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  input {
+    display: none;
+  }
+}
+
+.custom-checkbox .checkmark {
+  cursor: pointer;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #003e52;
+  display: inline-block;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: '';
+  position: absolute;
+
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid $white-color;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  background-color: transparent;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: $indigo-color;
+}
+//custom-checkbox 結束
+//custom-select開始
+.custom-select {
+  position: relative;
+  user-select: none;
+  width: 300px;
+}
+.custom-select .selected {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.custom-select .custom-options {
+  width: 300px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: 2;
+}
+.custom-select .custom-option {
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: #eee;
+  }
+}
+//custom-select結束
+//custom-select開始
+.custom-select-sub {
+  position: relative;
+  user-select: none;
+  width: 300px;
+}
+.custom-select-sub .selected-sub {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.custom-select-sub .custom-options-sub {
+  width: 300px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: 2;
+}
+.custom-select-sub .custom-option-sub {
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: #eee;
+  }
+}
+//custom-select結束
+//超商選擇
+.selected2 {
+  margin-top: 1.5rem;
+}
+
+//input placeholder金字開始
+.myInput::placeholder {
+  color: $skin-color;
+}
+// input 金字結束
+
+section.proccess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  .proccess-step {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .proccess-circle {
+      margin-inline: 2rem;
+      width: 50px;
+      height: 50px;
+      background-color: $indigo-color;
+      border-radius: 50%;
+      .step-num {
+        line-height: 50px;
+        color: $white-color;
+      }
+    }
+    .step-title {
+      padding-top: 1rem;
+    }
+  }
+
+  .proccess-line {
+    width: 270px;
+    height: 10px;
+    background-color: $indigo-color;
+    margin-bottom: 3.5rem;
+  }
+  .proccess-iconM {
+    display: none;
+  }
+}
+
+.not-this-proccess {
+  background-color: $grey-color !important;
+  .step-num {
+    color: $indigo-color !important;
+  }
+}
+
+section.cart-product-section {
+  margin-block: 5rem !important;
+
+  .cart-product-title {
+    font-size: $h2;
+    font-weight: $text-weight-medium;
+  }
+  .cart-product-info {
+    margin-top: 2rem;
+    align-items: center;
+
+    font-size: $h4;
+    .img-container {
+      padding: 0;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      width: 80px;
+      height: 80px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .subtotal {
+      font-weight: $text-weight-block;
+    }
+  }
+
+  .line {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: $indigo-color;
+    height: 3px;
+  }
+  .underline {
+    margin-top: 2rem;
+    padding: 0 !important;
+    width: 100%;
+    background-color: $indigo-color;
+    height: 1px;
+  }
+}
+section.cart-product-section-m {
+  display: none;
+}
+
+section.product-method-group {
+  box-sizing: border-box;
+  padding: 2rem 3rem;
+  margin-block: 3rem;
+  border: 2px solid $indigo-color;
+  .method-select {
+    .method-title {
+      font-size: $h2;
+      border-left: 5px solid $indigo-color;
+      padding-left: 1rem;
+      margin-block: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  .custom-info-section {
+    .info-title {
+      margin-block: 1rem;
+      font-size: $h2;
+      border-left: 5px solid $indigo-color;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info {
+      letter-spacing: $regular-spacing;
+      font-size: $h3;
+
+      .info-input {
+        display: flex;
+        margin-block: 2rem;
+        p {
+          width: 120px;
+          margin-bottom: 0;
+          margin-block: 0.5rem;
+        }
+        input {
+          width: 700px;
+          &:focus {
+            outline: 1px solid $indigo-color;
+          }
+        }
+        .selectCVS {
+          width: 170px;
+          text-decoration: none;
+          font-size: 1rem;
+          background-color: $indigo-color;
+          color: $white-color;
+          text-align: center;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+  .remark-title {
+    margin-left: 12px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: $h2;
+    border-left: 5px solid $indigo-color;
+    padding-left: 1rem;
+  }
+  .remark {
+    margin-left: 12px;
+    width: 98%;
+    overflow: auto;
+    resize: none;
+    box-sizing: border-box;
+    height: 90px;
+    &:focus {
+      outline: 1px solid $indigo-color;
+    }
+  }
+}
+// 優惠券pop-up開始
+section.coupon-pop-up {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.442);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  .row {
+    justify-content: center;
+  }
+  .coupon-select {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+
+    width: 1200px;
+    height: 600px;
+    background-color: $white-color;
+    border: 5px solid $indigo-color;
+    box-sizing: border-box;
+    padding: 2rem;
+    overflow: auto;
+    .title-group {
+      .title {
+        margin-block: 2rem;
+        font-size: $h2;
+        border-left: 5px solid $indigo-color;
+        padding-left: 1rem;
+      }
+      div {
+        .bi-x-lg {
+          cursor: pointer;
+          font-size: $h1;
+          color: $indigo-color;
+          &:hover {
+            color: $light-red;
+          }
+        }
+      }
+    }
+
+    .coupon-card {
+      cursor: pointer;
+      position: relative;
+
+      box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+      margin-inline: 2rem;
+      padding: 0;
+      margin-bottom: 2rem;
+      div {
+        width: 180px;
+        height: 180px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .coupon-card-none {
+        cursor: not-allowed;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.398);
+        background-image: url(/cart-img/coupon-none.svg);
+        z-index: 10;
+      }
+    }
+
+    .coupon-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      margin-left: 1rem;
+      padding-top: 1em;
+      padding-right: 1rem;
+      .coupon-title {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        color: $skin-color;
+        font-size: $h3;
+        font-weight: $text-weight-medium;
+      }
+      .not-pass-threshold {
+        color: $grey-deep-color !important;
+      }
+      .coupon-price {
+        color: $indigo-color;
+        font-weight: $text-weight-black;
+      }
+      .coupon-intro {
+        font-size: $h5;
+        color: $red;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+    }
+  }
+}
+// 優惠券pop-up結束
+section.product-coupon {
+  margin-block: 2rem;
+  width: 100%;
+  height: 100px;
+  background-color: $grey-color;
+  box-sizing: border-box;
+  padding-inline: 2rem;
+  font-size: $h2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #b4b4b4;
+  }
+
+  .coupon-title,
+  .coupon-used,
+  .coupon-choose {
+    color: $indigo-color;
+    letter-spacing: $regular-spacing;
+  }
+  .coupon-choose {
+    font-weight: $text-weight-block;
+  }
+  .coupon-choose-used {
+    font-size: $h3;
+    font-weight: $text-weight-medium;
+    background-color: $indigo-color;
+    color: $white-color;
+    padding: 0.75rem 1.5rem;
+  }
+}
+section.product-point {
+  margin-block: 2rem;
+  width: 100%;
+  height: 100px;
+
+  background-color: $grey-color;
+  box-sizing: border-box;
+  padding-inline: 2rem;
+  font-size: $h2;
+  .point-title {
+    color: $indigo-color;
+    span.bolder {
+      font-weight: $text-weight-black;
+    }
+    span.small {
+      font-size: $h5;
+    }
+  }
+
+  .point-input {
+    width: 150px;
+    text-align: center;
+    color: $skin-color;
+    &::placeholder {
+      text-align: center;
+    }
+    &:focus {
+      outline: 1px solid $indigo-color;
+    }
+  }
+  p {
+    font-size: $h6;
+  }
+}
+section.product-total-group {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: $h3;
+  .product-total-box {
+    width: 500px;
+    .item-container {
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .line {
+      background-color: $indigo-color;
+      width: 100%;
+      height: 1px;
+    }
+    .sum {
+      font-size: $h2;
+      font-weight: $text-weight-black;
+      padding-top: 1.5rem;
+    }
+  }
+  .submit-button {
+    cursor: pointer;
+    border: 0px !important;
+    outline: 0px !important;
+    padding: 0px !important;
+    margin-top: 1.5rem;
+    background-color: $indigo-color;
+    color: $white-color;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $skin-color;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  section.proccess {
+    .proccess-circle {
+      font-size: $h6;
+
+      width: 37px !important;
+      height: 37px !important;
+      .step-num {
+        line-height: 37px !important;
+      }
+    }
+    .proccess-line {
+      display: none;
+    }
+    .proccess-iconM {
+      display: block;
+      font-size: $h3;
+      font-weight: $text-weight-black;
+      margin-top: -3rem;
+    }
+    .step-title {
+      font-size: $p;
+    }
+  }
+
+  section.cart-product-section {
+    display: none;
+  }
+  //從這開始
+  section.cart-product-section-m {
+    margin-top: 3rem;
+    display: block;
+    .cart-product-title {
+      font-size: $h5;
+      font-weight: $text-weight-medium;
+    }
+    .cart-product-info {
+      margin-block: 1rem;
+      display: flex;
+      align-items: center;
+
+      font-size: $p;
+      .img-container {
+        margin: 1rem;
+        width: 60px;
+        height: 60px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .info-group {
+        height: 60px;
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        .cart-product-left {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          flex-basis: 200px;
+          justify-content: space-between;
+          .title {
+            font-size: $h6;
+          }
+        }
+        .cart-product-right {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .price {
+            font-weight: $text-weight-block !important;
+            font-size: $h6;
+          }
+        }
+      }
+
+      .subtotal {
+        font-weight: $text-weight-block;
+      }
+    }
+    .line {
+      margin-top: 1rem;
+      width: 100%;
+      background-color: $indigo-color;
+      height: 3px;
+    }
+    .underline {
+      padding-block: 0;
+      // margin-top: 2rem;
+      padding: 0 !important;
+      width: 100%;
+      background-color: $indigo-color;
+      height: 1px;
+    }
+  }
+  section.product-method-group {
+    padding: 1.5rem 2rem;
+    .method-select {
+      width: 200px;
+
+      .method-title {
+        font-size: $h3;
+      }
+    }
+    .custom-info-section {
+      .info-title {
+        margin-top: 2rem !important;
+        font-size: $h3;
+      }
+
+      .info {
+        letter-spacing: 0.1rem !important;
+        font-size: $h6;
+        .info-input {
+          display: flex;
+          margin-block: 1.9rem;
+          p {
+            width: 100px;
+          }
+          input {
+            width: 220px;
+            &:focus {
+              outline: 1px solid $indigo-color;
+            }
+          }
+        }
+        .selectCVS {
+          width: 180px !important;
+          text-decoration: none;
+          font-size: $p;
+          background-color: $indigo-color;
+          color: $white-color;
+          text-align: center;
+          line-height: 50px;
+        }
+      }
+    }
+    .remark-title {
+      font-size: $h3;
+    }
+    .remark {
+      width: 93%;
+    }
+  }
+  //coupon-pop-upM開始
+  section.coupon-pop-up {
+    justify-content: center;
+    .row {
+      justify-content: center;
+    }
+    .coupon-select {
+      width: 390px;
+      height: 500px;
+
+      padding: 2rem;
+
+      .title-group {
+        .title {
+          margin-block: 0rem;
+          margin-bottom: 2rem;
+          margin-left: -0.6rem;
+          font-size: $h4;
+        }
+        div {
+          .bi-x-lg {
+            font-size: $h5;
+          }
+        }
+      }
+
+      .coupon-card {
+        height: 122px;
+
+        margin-bottom: 2rem;
+        div {
+          width: 120px;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .coupon-card-none {
+          cursor: not-allowed;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.398);
+          background-image: url(/cart-img/coupon-none-m.svg);
+          z-index: 10;
+          div {
+            width: 90px !important;
+            height: 90px !important;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      .coupon-group {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        padding-block: 0.5rem !important;
+        .coupon-title {
+          color: $skin-color;
+          font-size: $h6;
+          font-weight: $text-weight-medium;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          overflow: hidden;
+        }
+        .not-pass-threshold {
+          color: $grey-color;
+        }
+
+        .coupon-price {
+          font-size: $h6;
+          color: $indigo-color;
+          font-weight: $text-weight-black;
+        }
+
+        .coupon-intro {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          overflow: hidden;
+          margin-bottom: 0;
+          font-size: $moblietext;
+        }
+      }
+    }
+  }
+  //coupon-pop-up結束
+  section.product-coupon {
+    font-size: $h6;
+    height: 70px;
+    .coupon-choose-used {
+      font-size: $p;
+
+      background-color: $indigo-color;
+      color: $white-color;
+      padding: 0.35rem 0.7rem;
+    }
+  }
+  section.product-point {
+    font-size: $h6;
+    height: 70px;
+    letter-spacing: $regular-spacing;
+    .point-input {
+      width: 80px;
+      text-align: center;
+
+      &::placeholder {
+        text-align: center;
+        font-size: $p;
+      }
+      &:focus {
+        outline: 1px solid $indigo-color;
+      }
+    }
+  }
+  section.product-total-group {
+    align-items: center;
+    font-size: $h5;
+    .product-total-box {
+      width: 345px;
+      .item-container {
+        width: 345px;
+      }
+      .line {
+        width: 100%;
+        height: 1px;
+      }
+      .sum {
+        font-size: $h4;
+      }
+    }
+    .submit-button {
+      font-size: $h3;
+
+      width: 180px;
+      height: 50px;
+
+      line-height: 50px;
+
+      &:hover {
+        background-color: $indigo-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <title>正在導向綠界...</title>
+    <style>
+      .loader-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        img {
+          margin-right: 1rem;
+          width: 180px;
+          height: 180px;
+        }
+        /* .line {
+          height: 150px;
+          width: 3px;
+          background-color: #003e52;
+        } */
+      }
+      /* HTML: <div class="loader"></div> */
+      /* HTML: <div class="loader"></div> */
+      .loader {
+        font-weight: bold;
+        font-family: monospace;
+        font-size: 30px;
+        display: inline-grid;
+      }
+      .loader:before,
+      .loader:after {
+        color: #003e52;
+        content: "Loading...";
+        grid-area: 1/1;
+        -webkit-mask: linear-gradient(90deg, #003e52 50%, #003e5200 0) 0 50%/2ch
+          100%;
+        animation: l11 1s infinite cubic-bezier(0.5, 220, 0.5, -220);
+      }
+      .loader:after {
+        -webkit-mask-position: 1ch 50%;
+        --s: -1;
+      }
+      @keyframes l11 {
+        100% {
+          transform: translateY(calc(var(--s, 1) * 0.1%));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader-box">
+      <img src="/img/logo-indigo-loading.png" alt="" />
+      <!-- <div class="line"></div> -->
+      <div class="loader"></div>
+    </div>
+    <%- html %>
+  </body>
+</html>

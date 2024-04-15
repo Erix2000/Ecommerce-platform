@@ -1,0 +1,260 @@
+// 顏色變數 
+$indigo-color: #003E52;
+$skin-color: #BC955C;
+$white-color: #FFFFFF;
+$gray-color: #D9D9D9;
+$black-color: #000000;
+$white-sec: #B2ACAC;
+$skin-sec: #CDAD80;
+$red: #940606;
+
+// 高度變數 
+$nav-hight: 90px;
+$footer-hight: 355px;
+$main-padding: 20px;
+
+// 字體變數 
+$main-font-family: 'Noto Serif TC', serif;
+;
+$text-weight-regular: 200;
+$text-weight-medium: 500;
+$text-weight-block: 700;
+$text-weight-black: 900;
+$h1: 32px;
+$h2: 24px;
+$h3: 20px;
+$h4: 18px;
+$h5: 16px;
+$h6: 14px;
+$p: 12px;
+$moblietext: 10px;
+
+// 字距變數 
+$regular-spacing: 0.18rem;
+
+body {
+    font-family: 'Noto Serif TC', serif;
+    ;
+}
+
+.mainImg img {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.courseText {
+    margin: auto;
+    padding: 30 30 0 30px;
+
+}
+
+.course-text {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.course-booking {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-book {
+    text-align: center;
+}
+
+.btn-booking {
+    font-size: $h5;
+    letter-spacing: 0.2rem;
+    padding: 7px 30px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #003E52 !important;
+
+    &:hover {
+        background-color: #BC955C !important;
+    }
+}
+
+.course-booking {
+    color: red;
+    font-size: $h6;
+    margin-top: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.textSmall {
+    font-size: 16px;
+}
+
+.textBlue {
+    color: #003E52;
+}
+
+.list-unstyled li {
+    padding: 5px 0;
+}
+
+.borderLeft {
+    border-left: 4px solid #BC955C;
+    padding-left: 10px;
+    color: #003E52;
+    font-size: 28px;
+}
+
+
+
+.product-sub-content {
+    // // display: flex;
+    // text-align: center;
+    // align-items: center;
+
+    .tab-group {
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        & label {
+            display: flex;
+            font-size: 16px;
+
+        }
+    }
+
+    .content {
+        font-size: 14px !important;
+    }
+}
+.label-line{
+    width: 100%;
+    background-color: #003E52;
+    height: 3px;
+}
+
+.panel-control {
+    position: absolute;
+    opacity: 0;
+}
+.panel-group {
+    text-align: center;
+    align-items: center;
+}
+
+.tab-group label {
+    display: inline-block;
+    padding-block: 10px;
+    width: 130px;
+    // padding: 10px 30px;
+    // border:2px solid $indigo-color;
+    border-bottom: #003E52 2px solid;
+    background-color: $white-color;
+    // bottom:-1px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content-group {
+    border-top: 2px solid $indigo-color;
+    border-bottom: 2px solid $indigo-color;
+    padding: 20px;
+}
+
+#radio1:checked~.tab-group [for="radio1"],
+#radio2:checked~.tab-group [for="radio2"] {
+    background-color: $indigo-color;
+    color: $white-color;
+}
+
+#radio1:hover~.tab-group [for="radio1"],
+#radio2:hover~.tab-group [for="radio2"] {
+    background-color: $indigo-color;
+    color: $white-color;
+}
+
+#radio1:checked~.content-group .content1,
+#radio2:checked~.content-group .content2 {
+    display: block
+}
+
+
+#offcanvasRight {
+    background-color: rgba(0, 62, 82, 0.90);
+    /* 淺藍色 */
+}
+
+.borderLeftOffcanvas {
+    border-left: 4px solid #BC955C;
+    padding-left: 10px;
+    color: #FFF;
+    font-size: 24px;
+}
+
+.textOffcanvas {
+    color: #FFF;
+    font-size: 24px;
+}
+
+.subTitle {
+    font-size: 24px;
+    color: #003E52;
+
+}
+
+.text {
+    font-size: 20px;
+}
+
+.star {
+    color: #BC955C;
+}
+
+.customerReview {
+    margin-bottom: 20px;
+}
+
+.dark {
+    width: 160px;
+    height: 48px;
+    padding: 13px 0px 12px 0px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: 10px auto;
+    background-color: #003E52;
+    color: #F0F0F0;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.light {
+    width: 160px;
+    height: 48px;
+    padding: 13px 0px 12px 0px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: 10px auto;
+    background-color: #BC955C;
+    color: #003E52;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+@media screen and (max-width: 576px) {
+
+    .courseText {
+        padding: 10px;
+
+
+    }
+
+    .mdNone {
+        display: none;
+    }
+}

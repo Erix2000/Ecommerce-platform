@@ -1,0 +1,416 @@
+// 顏色變數
+$indigo-color: #003e52;
+$skin-color: #bc955c;
+$white-color: #ffffff;
+$gray-color: #d9d9d9;
+$black-color: #000000;
+$white-sec: #b2acac;
+$skin-sec: #cdad80;
+$red: #940606;
+
+// 高度變數
+$nav-hight: 90px;
+$footer-hight: 355px;
+$main-padding: 20px;
+
+// 字體變數
+$main-font-family: 'Noto Serif TC', serif;
+$text-weight-regular: 200;
+$text-weight-medium: 500;
+$text-weight-block: 700;
+$text-weight-black: 900;
+$h1: 32px;
+$h2: 24px;
+$h3: 20px;
+$h4: 18px;
+$h5: 16px;
+$h6: 14px;
+$p: 12px;
+$moblietext: 10px;
+
+// 字距變數
+$regular-spacing: 0.18rem;
+
+// 自訂變數
+$coupon-img-size: 130px;
+$coupon-status-width: 85px;
+@media screen and (max-width: 992px) {
+  $coupon-img-size: 110px;
+}
+
+// 模組
+.order-status-1 {
+  color: $red;
+}
+.order-status-2 {
+  color: $indigo-color;
+}
+.order-status-3 {
+  color: $gray-color;
+}
+.order-status-4 {
+  color: $skin-color;
+}
+.order-status-5 {
+  color: $black-color;
+}
+
+.aside {
+  padding-block: 60px;
+}
+.main-content {
+  padding-block: 80px;
+  .main-content-title {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    padding-inline-start: 16px;
+    border-inline-start: 5px solid $skin-color;
+    color: $indigo-color;
+    margin-bottom: 35px;
+  }
+  .main-content-content {
+    padding-inline: 21px;
+    // 電腦版：優惠券頁面 CSS
+    .coupon-card {
+      position: relative;
+      box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+      padding: 0;
+    }
+
+    .coupon-card img {
+      width: 148px;
+      height: 100%;
+    }
+
+    .coupon-group {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+      justify-content: center;
+    }
+
+    .coupon-group .coupon-title {
+      color: #bc955c;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 20px;
+      margin-block: 5px;
+    }
+
+    .coupon-group .coupon-price {
+      color: #003e52;
+      font-size: 16px;
+      line-height: 15px;
+      margin-block: 5px;
+    }
+
+    .coupon-group .coupon-intro {
+      color: #d9d9d9;
+      font-size: 14px;
+      line-height: 15px;
+      margin-block: 5px;
+    }
+
+    .redeemButton {
+      background: #bc955c;
+      color: #f2f2f2;
+      font-size: 14px;
+      position: absolute;
+      display: flex;
+      width: 65px;
+      padding: 5px 12px;
+      justify-content: center;
+      align-items: center;
+      top: 10px;
+      right: 10px;
+      text-decoration: none;
+    }
+    .coupon-status-selector {
+      color: #003e52;
+      display: flex;
+      gap: 37px;
+      padding: 0;
+      & li:hover,
+      & li.active {
+        color: #bc955c;
+      }
+    }
+
+    // 電腦版：訂單頁面 CSS
+    .order-status-folder {
+      font-size: 22px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $black-color;
+      padding: 5px 10px;
+      margin-bottom: 8px;
+    }
+    .order-card {
+      width: 100%;
+      padding: 5px;
+      display: flex;
+      font-size: 1rem;
+      border-bottom: 1px solid $gray-color;
+      .order-img {
+        width: 120px;
+        height: 120px;
+      }
+      .order-detail {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-left: 8px;
+        .order-info {
+          display: flex;
+          justify-content: space-between;
+          padding: 0;
+          margin: 0;
+          margin-inline-end: 10px;
+          & span {
+            margin-inline-start: 3px;
+          }
+        }
+        .product-info {
+          display: flex;
+          flex-grow: 1;
+          & ul {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 1rem;
+            list-style: none;
+            padding-inline: 0;
+            margin: 0;
+            flex-grow: 1;
+          }
+          & div {
+            display: flex;
+            align-items: flex-start;
+            // gap: 10px;
+          }
+        }
+      }
+      .order-options {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    .detail {
+      font-size: 1.25rem;
+      display: flex;
+      gap: 28px;
+      .detail-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-align: justify;
+        text-align-last: justify;
+        width: 80px;
+      }
+      .detail-content {
+        flex-grow: 1;
+      }
+    }
+  }
+}
+// 電腦版：會員中心共用組件 CSS
+.member-center-nav {
+  overflow: scroll;
+  scrollbar-width: none;
+  .member-center-nav-title {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 3.6px;
+    color: $indigo-color;
+    padding-bottom: 40px;
+    padding-top: 5px;
+  }
+  .member-center-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    & hr {
+      border: 1px solid $indigo-color;
+      opacity: 1;
+    }
+    & li {
+      padding-inline: 9px;
+      &.active a {
+        color: $skin-color;
+      }
+      > a {
+        color: $indigo-color;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 500;
+        height: 31px;
+        letter-spacing: 2.2px;
+        text-wrap: nowrap;
+        display: flex;
+        &:hover {
+          color: $skin-color;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  // body {
+  //   scrollbar-width: 0;
+  // }
+  .aside {
+    padding-top: 66px;
+  }
+  .main {
+    width: 100%;
+  }
+  .main-content {
+    padding-block: 0px;
+    padding-inline: 20px;
+    .main-content-title {
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 2.7px;
+      padding-inline-start: 8px;
+      border-inline-start-width: 3px;
+      margin: 10px;
+    }
+    .main-content-content {
+      padding-inline: 20px;
+      padding-block: 10px;
+      // 手機板：優惠券頁面 CSS
+      .coupon-status-area {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+        .coupon-status {
+          display: flex;
+          justify-content: space-between;
+          border: none;
+          color: #003e52;
+          font-size: 0.75rem;
+          width: var($coupon-status-width);
+          padding-inline-end: 5px;
+        }
+        .coupon-status-selector {
+          flex-direction: column;
+          position: absolute;
+          gap: 0;
+          top: calc(100% + 5px);
+          font-size: 0.75rem;
+          font-weight: 200;
+          color: #fff !important;
+          background-color: #003e52e6;
+          list-style: none;
+          width: var($coupon-status-width);
+          padding: 5px 10px;
+          z-index: 1000;
+          & li {
+            padding-block: 5px;
+          }
+          & li:hover {
+            color: $skin-color;
+          }
+        }
+      }
+      .coupon-card img {
+        width: 120px;
+        height: 100%;
+      }
+
+      .coupon-group .coupon-title {
+        font-size: 18px;
+      }
+
+      .coupon-group .coupon-price {
+        font-size: 14px;
+      }
+
+      .coupon-group .coupon-intro {
+        font-size: 12px;
+      }
+
+      .redeemButton {
+        width: 50px;
+        height: 25px;
+        font-size: 12px;
+      }
+
+      // 手機板：訂單頁面 CSS
+      .order-card {
+        font-size: 0.75rem;
+        .order-img {
+          width: 55px;
+          height: 55px;
+        }
+        .order-detail {
+          padding-left: 5px;
+          gap: 0;
+          .order-info {
+            margin-inline-end: 0;
+          }
+          .product-info {
+            & ul {
+              font-size: 0.625rem;
+            }
+            & > div {
+              flex-direction: column;
+              align-items: flex-end;
+            }
+          }
+        }
+        .order-options {
+          gap: 5px;
+          justify-content: flex-end;
+        }
+      }
+    }
+    .details {
+      .detail {
+        font-size: 0.75rem;
+        gap: 10px;
+        .detail-title {
+          font-size: 0.75rem;
+          font-weight: 600;
+          width: 50px;
+        }
+        .detail-content {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  // 手機板：會員中心共用 CSS
+  .member-center-nav {
+    padding: 0;
+    .member-center-list {
+      width: 660px;
+      gap: 0;
+      & li {
+        > a {
+          font-size: 0.75rem;
+          justify-content: center;
+          align-items: center;
+        }
+        &.active a {
+          color: $skin-color;
+        }
+        &.active {
+          border-bottom: 1px solid $indigo-color;
+        }
+      }
+    }
+  }
+}

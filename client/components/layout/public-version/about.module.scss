@@ -1,0 +1,183 @@
+@import '@/styles/variables.scss';
+
+// 頁首
+.header-section {
+  position: relative;
+  width: 100%; 
+  height: 50vh; 
+
+  .header-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .header-group {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%); 
+    z-index: 1;
+
+    .header-text {
+      margin: 0;
+      color: #fff; 
+      font-size: 25px;
+    }
+
+    .header-btn {
+      margin-top: 10px; 
+      padding: 10px 20px;
+      border: none; 
+      background-color: $indigo-color; 
+      color: $white-color; 
+      cursor: pointer; 
+      transition: background-color 0.3s; 
+
+      .header-btn:hover {
+        background-color: $skin-color; 
+      }
+    }
+  }
+}
+
+// 頁中
+.main-section {
+  width: 1440px;
+  margin: auto;
+  margin-block: 100px;
+  .title, .description {
+    text-align: center; 
+    color: $indigo-color;
+    font-size: 26px;
+    font-weight: 900;
+  }
+
+  .section{
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+    margin-block: 30px;
+    span{
+      font-size: 24px;
+      font-weight: 500;
+      color: $indigo-color;
+
+    }
+  }
+
+  .first-section {
+    border-top: 1px solid $indigo-color;
+    padding-top: 50px;
+    .first-image {
+      order: 2;
+    }
+    .first-text {
+      order: 1; 
+      padding-right: 20px;
+      margin-block: 30px;
+      line-height: 1.5;
+      font-family: $main-font-family;
+      letter-spacing: $regular-spacing;
+      color: $indigo-color;
+    }
+  }
+
+  .second-section {
+    .second-image {
+      order: 1;
+    }
+    .second-text {
+      order: 2;
+      padding-left: 20px; 
+      margin-block: 30px;
+      line-height: 1.5;
+      font-family: $main-font-family;
+      letter-spacing: $regular-spacing;
+      color: $indigo-color;
+    }
+  }
+}
+
+// 頁尾
+.footer-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+
+  .footer-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 62, 82, 0.6); 
+      z-index: 1;
+    }
+
+    .footer-group {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      text-align: left;
+      .footer-font{
+        color: $white-color;
+        margin: 0 0 0 0; 
+        text-align: center;
+        line-height: 2.5;
+        font-family: $main-font-family;
+        letter-spacing: $regular-spacing;
+      }
+      .footer-text {
+        font-size: 24px;
+      }
+      .footer-text {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .main-section{
+    width: 370px;
+    .first-section, .second-section {
+      flex-direction: column; 
+      .first-image, .second-image {
+        order: 1; 
+      }
+      .first-text, .second-text {
+        order: 2;
+        padding: 0; 
+      }
+    }
+  }
+  .footer-section{
+    height: 150vh !important;
+    .footer-font{
+      line-height: 2 !important;
+      letter-spacing: $regular-spacing;
+      text-align: left !important;
+    }
+    .footer-title {
+      font-size: 24px !important;
+    }
+    .footer-text {
+      font-size: 18px !important;
+    }
+  }
+
+}

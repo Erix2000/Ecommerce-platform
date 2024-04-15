@@ -1,0 +1,18 @@
+
+/* START: 訂單詳細頁 */
+.detail {
+  display: flex;
+  gap: 10px;
+  font-size: 0.75rem;
+  padding-bottom: 20px;
+  .detail-title {
+    text-align: justify;
+    text-align-last: justify;
+    font-size: 0.75rem;
+    font-weight: 600;
+    width: 50px;
+  }
+  .detail-content {
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,575 @@
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+}
+.custom-checkbox input {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #003e52;
+  display: inline-block;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  background-color: transparent;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #003e52;
+}
+
+.custom-select {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 300px;
+}
+
+.custom-select .selected {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.custom-select .custom-options {
+  width: 300px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: 2;
+}
+
+.custom-select .custom-option {
+  padding: 10px;
+  cursor: pointer;
+}
+.custom-select .custom-option:hover {
+  background-color: #eee;
+}
+
+.custom-select-sub {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 300px;
+}
+
+.custom-select-sub .selected-sub {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.custom-select-sub .custom-options-sub {
+  width: 300px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: 2;
+}
+
+.custom-select-sub .custom-option-sub {
+  padding: 10px;
+  cursor: pointer;
+}
+.custom-select-sub .custom-option-sub:hover {
+  background-color: #eee;
+}
+
+input::-moz-placeholder {
+  color: #bc955c;
+}
+
+input::placeholder {
+  color: #bc955c;
+}
+
+main {
+  min-height: calc(100vh - 90px - 355px);
+}
+main section.proccess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+main section.proccess .proccess-step {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+main section.proccess .proccess-step .proccess-circle {
+  margin-inline: 2rem;
+  width: 50px;
+  height: 50px;
+  background-color: #003e52;
+  border-radius: 50%;
+}
+main section.proccess .proccess-step .proccess-circle .step-num {
+  line-height: 50px;
+  color: #ffffff;
+}
+main section.proccess .proccess-step .step-title {
+  padding-top: 1rem;
+}
+main section.proccess .proccess-line {
+  width: 270px;
+  height: 10px;
+  background-color: #003e52;
+  margin-bottom: 3.5rem;
+}
+main section.proccess .proccess-iconM {
+  display: none;
+}
+main .not-this-proccess {
+  background-color: #d9d9d9 !important;
+}
+main .not-this-proccess .step-num {
+  color: #003e52 !important;
+}
+main section.cart-product-section .product-title {
+  font-size: 32px;
+  margin-block: 3rem;
+  border-left: 5px solid #003e52;
+  padding-left: 1rem;
+  margin-left: -1.5rem;
+}
+main section.cart-product-section .product-title-row {
+  text-align: center;
+  font-size: 24px;
+}
+main section.cart-product-section .line {
+  margin-block: 1.5rem;
+  width: 100%;
+  background-color: #003e52;
+  height: 3px;
+}
+main section.cart-product-section .product-info {
+  font-size: 18px;
+}
+main section.cart-product-section .underline {
+  margin-block: 2rem;
+  width: 100%;
+  background-color: #003e52;
+  height: 1px;
+}
+main section.product-method-group {
+  box-sizing: border-box;
+  padding: 2rem 3rem;
+  margin-block: 3rem;
+  border: 2px solid #003e52;
+}
+main section.product-method-group .method-select .method-title {
+  font-size: 24px;
+  border-left: 5px solid #003e52;
+  padding-left: 1rem;
+  margin-block: 1rem;
+  margin-bottom: 1.5rem;
+}
+main section.product-method-group .custom-info-section .info-title {
+  margin-block: 1rem;
+  font-size: 24px;
+  border-left: 5px solid #003e52;
+  padding-left: 1rem;
+}
+main section.product-method-group .custom-info-section .info {
+  letter-spacing: 0.18rem;
+  font-size: 20px;
+}
+main section.product-method-group .custom-info-section .info .info-input {
+  display: flex;
+  margin-block: 2rem;
+}
+main section.product-method-group .custom-info-section .info .info-input p {
+  width: 120px;
+}
+main section.product-method-group .custom-info-section .info .info-input input {
+  width: 700px;
+}
+main section.product-method-group .custom-info-section .info .info-input input:focus {
+  outline: 1px solid #003e52;
+}
+main section.product-method-group .remark-title {
+  margin-left: 12px;
+  margin-top: 2rem;
+  font-size: 24px;
+  border-left: 5px solid #003e52;
+  padding-left: 1rem;
+}
+main section.product-method-group .remark {
+  margin-left: 12px;
+  width: 98%;
+  overflow: auto;
+  resize: none;
+  margin-top: 1rem;
+  box-sizing: border-box;
+  height: 90px;
+}
+main section.product-method-group .remark:focus {
+  outline: 1px solid #003e52;
+}
+main section.coupon-pop-up {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.442);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+main section.coupon-pop-up .coupon-select {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 1200px;
+  height: 600px;
+  background-color: #ffffff;
+  border: 5px solid #003e52;
+  box-sizing: border-box;
+  padding: 2rem;
+  overflow: auto;
+}
+main section.coupon-pop-up .coupon-select .title-group .title {
+  margin-block: 2rem;
+  font-size: 24px;
+  border-left: 5px solid #003e52;
+  padding-left: 1rem;
+}
+main section.coupon-pop-up .coupon-select .title-group div .bi-x-lg {
+  cursor: pointer;
+  font-size: 32px;
+  color: #003e52;
+}
+main section.coupon-pop-up .coupon-select .title-group div .bi-x-lg:hover {
+  color: #940606;
+}
+main section.coupon-pop-up .coupon-select .coupon-card {
+  cursor: pointer;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  margin-inline: 2rem;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+main section.coupon-pop-up .coupon-select .coupon-card img {
+  width: 148px;
+  height: 148px;
+}
+main section.coupon-pop-up .coupon-select .coupon-group {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  padding-top: 1em;
+}
+main section.coupon-pop-up .coupon-select .coupon-group .coupon-title {
+  color: #bc955c;
+  font-size: 20px;
+  font-weight: 500;
+}
+main section.coupon-pop-up .coupon-select .coupon-group .coupon-price {
+  color: #003e52;
+  font-weight: 900;
+}
+main section.coupon-pop-up .coupon-select .coupon-group .coupon-intro {
+  color: #d9d9d9;
+}
+main section.product-coupon {
+  margin-block: 2rem;
+  width: 100%;
+  height: 100px;
+  background-color: #d9d9d9;
+  box-sizing: border-box;
+  padding-inline: 2rem;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main section.product-coupon:hover {
+  background-color: #b4b4b4;
+}
+main section.product-coupon .coupon-title,
+main section.product-coupon .coupon-used,
+main section.product-coupon .coupon-choose {
+  color: #003e52;
+  letter-spacing: 0.18rem;
+}
+main section.product-coupon .coupon-choose {
+  font-weight: 700;
+}
+main section.product-coupon .coupon-choose-used {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #003e52;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+}
+main section.product-point {
+  margin-block: 2rem;
+  width: 100%;
+  height: 100px;
+  background-color: #d9d9d9;
+  box-sizing: border-box;
+  padding-inline: 2rem;
+  font-size: 24px;
+}
+main section.product-point .point-title {
+  color: #003e52;
+}
+main section.product-point .point-title span.bolder {
+  font-weight: 900;
+}
+main section.product-point .point-title span.small {
+  font-size: 16px;
+}
+main section.product-point .point-input {
+  width: 150px;
+  text-align: center;
+  color: #bc955c;
+}
+main section.product-point .point-input::-moz-placeholder {
+  text-align: center;
+}
+main section.product-point .point-input::placeholder {
+  text-align: center;
+}
+main section.product-point .point-input:focus {
+  outline: 1px solid #003e52;
+}
+main section.product-point p {
+  font-size: 14px;
+}
+main section.product-total-group {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 20px;
+}
+main section.product-total-group .product-total-box {
+  width: 500px;
+}
+main section.product-total-group .product-total-box .item-container {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+main section.product-total-group .product-total-box .line {
+  background-color: #003e52;
+  width: 100%;
+  height: 1px;
+}
+main section.product-total-group .product-total-box .sum {
+  font-size: 24px;
+  font-weight: 900;
+  padding-top: 1.5rem;
+}
+main section.product-total-group a {
+  margin-top: 1.5rem;
+  text-decoration: none;
+  background-color: #003e52;
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+main section.product-total-group a:hover {
+  background-color: #bc955c;
+}
+
+@media screen and (max-width: 430px) {
+  main {
+    max-width: 390px !important;
+  }
+  main section.proccess .proccess-circle {
+    font-size: 14px;
+    width: 37px !important;
+    height: 37px !important;
+  }
+  main section.proccess .proccess-circle .step-num {
+    line-height: 37px !important;
+  }
+  main section.proccess .proccess-line {
+    display: none;
+  }
+  main section.proccess .proccess-iconM {
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: -3rem;
+  }
+  main section.proccess .step-title {
+    font-size: 12px;
+  }
+  main section.cart-product-section .product-title {
+    font-size: 24px;
+    margin-left: 0;
+  }
+  main section.cart-product-section .product-title-row {
+    font-size: 18px;
+  }
+  main section.cart-product-section .product-info {
+    font-size: 14px !important;
+  }
+  main section.product-method-group {
+    padding: 1.5rem 2rem;
+  }
+  main section.product-method-group .method-select {
+    width: 200px;
+  }
+  main section.product-method-group .method-select .method-title {
+    font-size: 20px;
+  }
+  main section.product-method-group .custom-info-section .info-title {
+    margin-top: 2rem !important;
+    font-size: 20px;
+  }
+  main section.product-method-group .custom-info-section .info {
+    letter-spacing: 0.1rem !important;
+    font-size: 14px;
+  }
+  main section.product-method-group .custom-info-section .info .info-input {
+    display: flex;
+    margin-block: 2rem;
+  }
+  main section.product-method-group .custom-info-section .info .info-input p {
+    width: 100px;
+  }
+  main section.product-method-group .custom-info-section .info .info-input input {
+    width: 220px;
+  }
+  main section.product-method-group .custom-info-section .info .info-input input:focus {
+    outline: 1px solid #003e52;
+  }
+  main section.product-method-group .remark-title {
+    font-size: 20px;
+  }
+  main section.product-method-group .remark {
+    width: 93%;
+  }
+  main section.coupon-pop-up .coupon-select {
+    width: 390px;
+    height: 500px;
+    padding: 2rem;
+  }
+  main section.coupon-pop-up .coupon-select .title-group .title {
+    margin-block: 0rem;
+    margin-bottom: 2rem;
+    margin-left: -0.6rem;
+    font-size: 18px;
+  }
+  main section.coupon-pop-up .coupon-select .title-group div .bi-x-lg {
+    font-size: 16px;
+  }
+  main section.coupon-pop-up .coupon-select .coupon-card {
+    height: 122px;
+    margin-bottom: 2rem;
+  }
+  main section.coupon-pop-up .coupon-select .coupon-card img {
+    width: 120px;
+    height: 120px;
+  }
+  main section.coupon-pop-up .coupon-select .coupon-group {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    padding-block: 0.5rem !important;
+  }
+  main section.coupon-pop-up .coupon-select .coupon-group .coupon-title {
+    color: #bc955c;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  main section.coupon-pop-up .coupon-select .coupon-group .coupon-price {
+    font-size: 14px;
+    color: #003e52;
+    font-weight: 900;
+  }
+  main section.coupon-pop-up .coupon-select .coupon-group .coupon-intro {
+    font-size: 10px;
+    color: #d9d9d9;
+  }
+  main section.product-coupon {
+    font-size: 16px;
+    height: 70px;
+  }
+  main section.product-coupon .coupon-choose-used {
+    font-size: 16px;
+    background-color: #003e52;
+    color: #ffffff;
+    padding: 0.35rem 0.7rem;
+  }
+  main section.product-point {
+    font-size: 16px;
+    height: 70px;
+    letter-spacing: 0.18rem;
+  }
+  main section.product-point .point-input {
+    width: 80px;
+    text-align: center;
+  }
+  main section.product-point .point-input::-moz-placeholder {
+    text-align: center;
+    font-size: 12px;
+  }
+  main section.product-point .point-input::placeholder {
+    text-align: center;
+    font-size: 12px;
+  }
+  main section.product-point .point-input:focus {
+    outline: 1px solid #003e52;
+  }
+  main section.product-total-group {
+    align-items: center;
+    font-size: 16px;
+  }
+  main section.product-total-group .product-total-box {
+    width: 380px;
+  }
+  main section.product-total-group .product-total-box .item-container {
+    width: 380px;
+  }
+  main section.product-total-group .product-total-box .line {
+    width: 100%;
+    height: 1px;
+  }
+  main section.product-total-group .product-total-box .sum {
+    font-size: 18px;
+  }
+  main section.product-total-group a {
+    font-size: 20px;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+  }
+  main section.product-total-group a:hover {
+    background-color: #003e52;
+  }
+}/*# sourceMappingURL=cart-style-step2.css.map */

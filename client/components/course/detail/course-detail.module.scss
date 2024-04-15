@@ -1,0 +1,513 @@
+@import '@/styles/variables.scss';
+
+
+
+.mainImg {
+    width: 500px; /* 設置容器寬度為 500px */
+    height: 500px; /* 設置容器高度為 500px，這樣容器就是一個正方形了 */
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.mainImg img {
+    width: 100%; /* 讓圖片寬度填滿容器 */
+    height: 100%; /* 讓圖片高度填滿容器 */
+    object-fit: cover; /* 讓圖片裁切以填滿容器 */
+}
+
+
+
+.course-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+// tab樣式
+
+
+.tabs-titles {
+    list-style: none;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.tab-title {
+    background-color: #fff;
+    display: inline-block;
+    padding-block: 10px;
+    padding-inline: 20px;
+    color: $indigo-color;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: $main-font-family;
+    // border-bottom: 1px solid $indigo-color;
+}
+
+.tab-title:hover {
+    background-color: $indigo-color;
+    color: #fff;
+}
+
+.tab-title--active {
+    background-color: $indigo-color;
+    color: #fff;
+}
+
+.tab-content {
+    background-color: #fff;
+    padding: 5px;
+    margin: 0;
+    border-top: 2px solid $indigo-color;
+}
+
+.courseText {
+    margin: auto;
+    padding: 30 30 0 30px;
+    color: $indigo-color;
+
+
+
+}
+
+.course-text {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+
+    .text-secondary {
+        color: $indigo-color;
+    }
+}
+
+.course-booking {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-book {
+    text-align: center;
+}
+
+.btn-booking {
+    font-size: 20px;
+    letter-spacing: 0.18rem;
+    padding: 9px 30px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #003E52 !important;
+    margin-top: 30px;
+
+    &:hover {
+        background-color: #BC955C !important;
+    }
+}
+
+.course-booking {
+    color: red;
+    font-size: $h6;
+    margin-top: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.textSmall {
+    font-size: 16px;
+}
+
+.textBlue {
+    color: #003E52;
+}
+
+.list-unstyled li {
+    padding: 5px 0;
+    letter-spacing: 0.12rem;
+}
+
+.borderLeft {
+    border-left: 4px solid #BC955C;
+    padding-left: 10px;
+    color: #003E52;
+    font-size: 22px;
+}
+
+
+
+.course-sub-content {
+    // display: flex;
+    // text-align: center;
+    // align-items: center;
+
+    .tab-group {
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        & label {
+            display: flex;
+            font-size: 16px;
+            letter-spacing: 0.2rem;
+
+        }
+    }
+
+    .content {
+        font-size: 14px !important;
+    }
+}
+
+.label-line {
+    width: 100%;
+    background-color: #003E52;
+    height: 3px;
+}
+
+.panel-control {
+    position: absolute;
+    opacity: 0;
+}
+
+.panel-group {
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.bookarea {
+    width: 100%;
+    text-align: center;
+}
+
+.content-group {
+    border-top: 2px solid $indigo-color;
+    border-bottom: 2px solid $indigo-color;
+    padding: 20px;
+}
+
+#radio1:checked~.tab-group [for="radio1"],
+#radio2:checked~.tab-group [for="radio2"] {
+    background-color: $indigo-color;
+    color: $white-color;
+}
+
+#radio1:hover~.tab-group [for="radio1"],
+#radio2:hover~.tab-group [for="radio2"] {
+    background-color: $indigo-color;
+    color: $white-color;
+}
+
+#radio1:checked~.content-group .content1,
+#radio2:checked~.content-group .content2 {
+    display: block
+}
+
+
+.custom-offcanvas {
+    background-color: $indigo-color;
+}
+
+.borderLeftOffcanvas {
+    border-left: 4px solid #BC955C;
+    padding-left: 10px;
+    color: #FFF;
+    font-size: 24px;
+}
+
+.textOffcanvas {
+    color: #FFF;
+    font-size: 24px;
+}
+
+.subTitle {
+    color: #003E52;
+    font-size: 28px;
+    letter-spacing: 0.18rem;
+}
+
+.classroom {
+    font-size: 22px;
+}
+
+.course-outline {
+    font-size: 18px;
+}
+
+.text {
+    font-size: 18px;
+}
+
+.star {
+    color: #BC955C;
+}
+
+.list-unstyled {
+    font-size: $h4;
+}
+
+.customerReview {
+    margin-bottom: 20px;
+}
+
+.dark {
+    width: 160px;
+    height: 48px;
+    padding: 13px 0px 12px 0px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: 10px auto;
+    background-color: #003E52;
+    color: #F0F0F0;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.light {
+    width: 160px;
+    height: 48px;
+    padding: 13px 0px 12px 0px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: 10px auto;
+    background-color: #BC955C;
+    color: #003E52;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+.image-container {
+    width: 350px;
+    /* 固定容器寬度 */
+    height: 380px;
+    /* 固定容器高度 */
+    overflow: hidden;
+    /* 超出容器範圍的內容將被隱藏 */
+}
+.img-fluid{
+    border-radius: 50%;
+}
+
+.image-container img {
+    width: 100%;
+    /* 圖片寬度填滿容器 */
+    height: 100%;
+    /* 圖片高度填滿容器 */
+    object-fit: cover;
+    /* 圖片填滿容器，保持長寬比 */
+}
+
+.course-info {
+    color: white;
+    /* 設置文字顏色為白色 */
+    letter-spacing: $regular-spacing;
+
+    .btn {
+        color: white;
+        font-size: $h4;
+    }
+}
+
+.group-line{
+    height: 2px;
+    background-color: #003E52;
+    width: 100%;
+    margin: 40px 0 0 0;
+}
+
+.row {
+    color: $indigo-color;
+}
+
+.course-comments-title {
+    font-size: 18px;
+    margin: 30px 0px;
+    letter-spacing: 0.18rem;
+}
+
+.course-comment {
+    font-size: 18px !important;
+    width: 100%;
+
+    .course-comment-content-top {
+        font-size: 18px !important;
+        margin-bottom: 0px !important;
+
+        .client-name {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+
+    .course-comment-header {
+        display: flex;
+        align-items: center;
+
+
+        & img {
+            width: 100px !important;
+            height: 100px !important;
+            border-radius: 50%;
+
+        }
+    }
+
+    .date-m {
+        display: none;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+}
+
+.more {
+    font-size: 14px;
+    color: $indigo-color;
+}
+
+// 在電腦版消失
+.slide-m {
+    display: none;
+}
+
+.course-p-m {
+    display: none;
+}
+
+.date-m {
+    display: none;
+}
+
+.content {
+    padding-top: 20px;
+}
+
+
+
+@media screen and (max-width: 430px) {
+
+    .courseText {
+        padding: 10px;
+
+
+    }
+
+    .mdNone {
+        display: none;
+    }
+
+    .image-container {
+        width: 100vw;
+        /* 固定容器寬度 */
+        overflow: hidden;
+        /* 超出容器範圍的內容將被隱藏 */
+    }
+
+    .image-container img {
+        width: 100%;
+        /* 圖片寬度填滿容器 */
+        height: 100%;
+        /* 圖片高度填滿容器 */
+        object-fit: cover;
+        /* 圖片填滿容器，保持長寬比 */
+    }
+
+}
+
+ // 產品評論區
+ .course-comments{
+
+    
+    
+    // width: 960px;
+    padding-block: 30px;
+    padding-inline: 20px;
+    color: $indigo-color;
+    font-size: $h3;
+    font-weight: $text-weight-medium;
+    letter-spacing: $regular-spacing;
+
+    
+
+    .course-comments-title{
+        margin-bottom: 30px;
+
+        .star{
+            letter-spacing: 0.18rem;
+            color:$skin-color !important;
+        }
+    }
+
+    
+
+    .course-comment{
+        margin-block: 40px;
+        padding-inline:20px;
+        font-size: $h4;
+    }
+
+    .course-comment-header{
+        
+     
+        & img{
+            width: 100px !important;
+            height: 100px;
+            border-radius: 50%;
+            
+
+        }
+    }
+
+    .course-comment-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+
+        .course-comment-content-top{
+            display: flex;
+            justify-content: space-between;
+            font-size: $h4;
+            margin-bottom: 10px;
+
+            .like{
+                display: inline-block;
+                margin-left: 10px;
+                letter-spacing: 0.18rem;
+                color:$skin-color !important;
+            }
+            .date{
+                font-size: $h6;
+            }
+            
+
+            
+        }
+    }
+
+    .more{
+        display: flex;
+        justify-content: flex-end;
+        margin-block: 30px;
+
+        & a{
+            transition: background-color 0.3s ease;
+            color: $indigo-color;
+            text-decoration: none;
+
+        }
+
+        & a:hover,
+        & a:active,
+        & a:focus-within{
+            color: $indigo-color;
+        }
+            
+        }
+
+        
+    }

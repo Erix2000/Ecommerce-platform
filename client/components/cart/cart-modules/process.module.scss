@@ -1,0 +1,91 @@
+@import '@/styles/variables.scss';
+
+section.process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  .process-step {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .process-circle {
+      margin-inline: 2rem;
+      width: 50px;
+      height: 50px;
+      background-color: $indigo-color;
+      border-radius: 50%;
+      .step-num {
+        line-height: 50px;
+        color: $white-color;
+      }
+    }
+    .step-title {
+      padding-top: 1rem;
+    }
+  }
+
+  .process-line {
+    width: 270px;
+    height: 10px;
+    background-color: $indigo-color;
+    margin-bottom: 3.5rem;
+  }
+  .process-iconM {
+    display: none;
+  }
+}
+
+.not-this-process {
+  background-color: $grey-color !important;
+  .step-num {
+    color: $indigo-color !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section.process {
+    margin-top: 3rem;
+
+    .process-circle {
+      font-size: $h6;
+      width: 37px !important;
+      height: 37px !important;
+      .step-num {
+        line-height: 37px !important;
+      }
+    }
+    .process-line {
+      display: none;
+    }
+    .process-iconM {
+      display: block;
+      font-size: $h3;
+      font-weight: $text-weight-black;
+      margin-top: -3rem;
+    }
+    .step-title {
+      font-size: $p;
+    }
+  }
+  section.empty-cart-logo-group {
+    .image {
+      img {
+        height: 230px;
+        width: 230px;
+      }
+    }
+    .illustrate {
+      margin-top: -2.5rem;
+      font-size: $h3;
+    }
+    .direct-button {
+      width: 140px;
+      height: 50px;
+      font-size: $h5;
+      &:hover {
+        background-color: $indigo-color;
+      }
+    }
+  }
+}

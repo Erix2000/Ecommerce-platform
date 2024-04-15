@@ -1,0 +1,668 @@
+@import '@/styles/variables.scss';
+
+
+
+// 我可愛的價錢range:))
+.rc-slider-rail {
+  background-color: $grey-color;
+}
+.rc-slider-track {
+  background-color: $skin-color;
+}
+
+// 蓋過公版設定
+.aside,.offcanvas {
+  // 全域設定
+  font-family: $main-font-family;
+  list-style: none;
+  text-decoration: none !important;
+  box-sizing: border-box;
+
+  & p {
+    margin: 0;
+    padding: 0;
+  }
+
+  // 價錢
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  .range-slider {
+    margin-block: 15px;
+    position: relative;
+    width: 100%;
+    height: 5px;
+    border-radius: 15px;
+    background-color: $grey-color;
+  }
+
+  .range-slider .progress {
+    position: absolute;
+    left: 25%;
+    right: 0%;
+    height: 100%;
+    border-radius: 15px;
+    /* background: transparent linear-gradient(90deg, #e4e7c1 0%, #d39892 100%) 0% 0%
+            no-repeat padding-box; */
+    background-color: $skin-color;
+  }
+
+  .range-slider input[type='range'] {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    // 可能是ok的要再試試看
+    -webkit-appearance: none;
+    pointer-events: none;
+    background: none;
+    outline: none;
+  }
+
+  .range-slider .range-min::-webkit-slider-thumb {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: $skin-color;
+    border-radius: 50%;
+    opacity: 1;
+  }
+  .range-slider .range-max::-webkit-slider-thumb {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: $skin-color;
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+  .num-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .numberVal input {
+    width: 60px;
+    padding-block: 5px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid $indigo-color;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  // checkbox
+  input[type='checkbox'] {
+    border: 2px solid $indigo-color !important;
+    border-radius: 0px;
+    outline: transparent !important;
+  }
+
+  input[type='checkbox']:checked {
+    background-color: $indigo-color;
+    border-radius: 0px;
+    color: $white-color;
+    outline: none !important;
+  }
+
+  // link-active
+  .link-dot-active {
+    display: inline-block !important;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: $skin-color;
+    margin-right: 15px;
+    margin-block: auto;
+    transition: 1s;
+  }
+
+  .link-active {
+    color: $skin-color;
+  }
+}
+
+// 手機版
+@media screen and (max-width: 1200px) {
+  // 在手機版消失
+  .slide {
+    display: none;
+  }
+
+  .selected {
+    display: none;
+  }
+
+  .middle-content {
+    padding: 0 !important;
+    font-size: 12px !important;
+    margin-bottom: 15px;
+
+    .select {
+      display: none !important;
+    }
+
+    .search {
+      width: 130px !important;
+    }
+
+    & input {
+      font-size: 12px !important;
+    }
+
+    .search-btn {
+      font-size: 12px !important;
+    }
+
+    .custom-select {
+      width: 130px !important;
+    }
+  }
+
+  // 改變公版樣式
+  .main {
+    margin: 0;
+    padding: 0;
+
+    .content {
+      padding-top: 0;
+    }
+  }
+
+  // 在手機板出現
+  .mmenu {
+    display: block;
+    letter-spacing: 0.18rem;
+    color:$indigo-color;
+  }
+
+  .mbox{
+    letter-spacing: 0.18rem;
+  }
+
+  .aside-button1 {
+    background-color: $skin-color;
+    border: 2px solid;
+    color: $white-color;
+    height: 50px;
+    letter-spacing: 0.18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aside-button2 {
+    background-color: $grey-color;
+    border: 2px solid;
+    color: $white-color;
+    letter-spacing: 0.18rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // 手機版
+  .slide-m {
+    display: block !important;
+    padding-inline: 0 !important;
+
+    .carousel-item {
+      // height: 0 !important;
+      height: 210px !important;
+      // object-fit: contain;
+      overflow: hidden;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+      width: 10% !important;
+    }
+  }
+
+  .middle-content-m {
+    display: flex !important;
+    // flex-direction: column;
+    margin-top: 20px;
+    color: $indigo-color !important;
+    margin-right: 0;
+    margin-left: 0;
+
+    .mbox {
+      // flex-grow: 1;
+      border-bottom: 2px solid $indigo-color;
+      font-size: $h6;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px;
+    }
+
+    .mmenu {
+      background-color: $white-color;
+      padding: 10px;
+      padding-top: 40px;
+      font-size: 12px !important;
+
+      letter-spacing: $regular-spacing;
+      font-weight: $text-weight-medium;
+
+      // height: 400px;
+      position: fixed;
+      top: calc(50vh - 200px);
+      left: calc(50vw - 150px);
+      z-index: 50;
+
+      .menu-title {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+      .menu-subtitle {
+        margin-bottom: 5px;
+      }
+    }
+
+    .brand-menu {
+      display: none;
+      width: 300px;
+      position: relative;
+      background-color: #ccc;
+
+      & li {
+        margin-bottom: 10px !important;
+      }
+      & a {
+        color: $indigo-color;
+        font-size: 12px;
+      }
+      & a:hover,
+      & a:active {
+        color: $indigo-color;
+      }
+
+      .menu-close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+
+    .select-menu {
+      display: none;
+      width: 300px;
+      position: relative;
+      font-size: 14px !important;
+      background-color: #ccc;
+
+      .menu-close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .form-check {
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+
+      & input[type='checkbox'] {
+        border: 2px solid $indigo-color;
+        border-radius: 0px;
+      }
+
+      & input[type='checkbox']:checked {
+        background-color: $indigo-color;
+        border-radius: 0px;
+        color: $white-color;
+      }
+
+      .btn-group {
+        // margin-block: 50px;
+        display: flex;
+        // flex-direction: column;
+        gap: 10px;
+
+        a {
+          flex: 1;
+          margin-block-start: 20px;
+          width: 100%;
+          padding-block: 7px;
+          color: $white-color;
+          background-color: $indigo-color;
+          text-decoration: none;
+          letter-spacing: $regular-spacing;
+        }
+
+        .aside-button1 {
+          background-color: $skin-color;
+          // border: 2px solid;
+          color: $white-color;
+        }
+
+        .aside-button2 {
+          background-color: $grey-color;
+          // border: 2px solid;
+          color: $white-color;
+        }
+      }
+    }
+
+    .order-menu {
+      display: none;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+
+      .menu-close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      & label {
+        // display: inline;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        & input {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .product-list {
+    .pcard {
+      font-size: 16px;
+
+      .like {
+        // position: absolute;
+        width: 25px !important;
+        top: 178px !important;
+        right: 5px;
+      }
+
+      .card-body {
+        .pcard-title {
+          margin-top: 5px !important;
+          margin-bottom: 10px !important;
+        }
+
+        .pcard-price {
+          margin-bottom: 5px !important;
+        }
+      }
+    }
+
+    .add-cart {
+      height: 37px !important;
+      font-size: 14px !important;
+    }
+  }
+
+  .product-list-pag {
+    & a {
+      font-size: 14px !important;
+    }
+  }
+}
+
+// 在電腦版display:none
+.slide-m {
+  display: none;
+}
+
+.middle-content-m {
+  display: none;
+}
+
+.content {
+  padding-top: 20px;
+}
+
+.mmenu {
+  display: none;
+}
+
+// slide圖片
+.slide-pics {
+  // width: 960px;
+  padding-inline: 20px;
+  position: relative;
+
+  .carousel-item {
+    height: 420px;
+    // object-fit: contain;
+    overflow: hidden;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 10% !important;
+  }
+
+  & img {
+    height: 420px;
+  }
+}
+
+// 中間內容
+.middle-content {
+  padding-block: 30px;
+  padding-inline: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  color: $indigo-color;
+  font-size: $h5;
+  font-weight: $text-weight-medium;
+  letter-spacing: $regular-spacing;
+
+  .allnum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-box {
+    display: flex;
+
+    .custom-select {
+      margin-right: 20px;
+      width: 180px;
+      text-align: center;
+      position: relative;
+
+      .custom-checkbox {
+        display: flex;
+        align-items: center;
+
+        & input {
+          display: none;
+        }
+      }
+
+      .custom-options {
+        width: 180px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        z-index: 99;
+      }
+
+      .selected {
+        border-bottom: 2px solid $indigo-color;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      .custom-option {
+        border-inline: 2px solid $indigo-color;
+        border-bottom: 2px solid $indigo-color;
+        padding: 5px 10px;
+        background-color: $white-color;
+        cursor: pointer;
+      }
+
+      .custom-option:hover {
+        background-color: $indigo-color;
+        color: $white-color;
+      }
+
+      .checkmark {
+        position: relative;
+        height: 20px;
+        width: 20px;
+        border: 1px solid #003e52;
+        display: inline-block;
+      }
+
+      .custom-checkbox & input:checked + .checkmark::after {
+        content: '';
+        position: absolute;
+
+        left: 6px;
+        top: 2px;
+        width: 6px;
+        height: 12px;
+        border: solid $white-color;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+        background-color: transparent;
+      }
+
+      .custom-checkbox & input:checked + .checkmark {
+        background-color: $indigo-color;
+      }
+    }
+
+    .search {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      & input {
+        width: 100%;
+        padding-block: 5px;
+        font-size: 16px;
+        border: none;
+        border-bottom: 2px solid $indigo-color;
+        outline: none;
+        transition: border-color 0.3s ease-in-out;
+      }
+
+      & input::placeholder {
+        color: $indigo-color; /* 设置占位符文字的颜色 */
+        font-weight: $text-weight-medium;
+        letter-spacing: $regular-spacing;
+      }
+
+      .search-btn {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// 商品列表
+.product-list {
+  padding-inline: 20px;
+  color: $indigo-color;
+  font-size: $h3;
+  font-weight: $text-weight-medium;
+  letter-spacing: $regular-spacing;
+  // gap:10px;
+
+  .add-cart {
+    width: 100%;
+    height: 55px;
+    color: $white-color;
+    background-color: $indigo-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .add-cart:hover {
+    width: 100%;
+    height: 55px;
+    color: $indigo-color;
+    background-color: $white-color;
+    border: 2px solid $indigo-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // 現在的卡片
+  .pcard {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+
+    .like {
+      position: absolute;
+      width: 30px;
+      top: 210px;
+      right: 5px;
+    }
+
+    & img {
+      width: 100%;
+    }
+
+    .card-body {
+      .pcard-title {
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+
+      .pcard-price {
+        text-align: end;
+        margin-bottom: 10px;
+        color: #e82727;
+
+        & span {
+          font-size: $h5;
+          color: $indigo-color;
+        }
+      }
+    }
+  }
+}
+
+// 分頁
+.product-list-pag {
+  display: flex;
+  justify-content: center;
+  padding-block: 30px;
+
+  .product-list-ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    font-size: $h4;
+
+    & a {
+      display: block;
+      width: 20px;
+      color: $indigo-color;
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid transparent;
+      text-decoration: none;
+    }
+
+    & a:hover {
+      border-bottom: 2px solid $indigo-color;
+    }
+  }
+}

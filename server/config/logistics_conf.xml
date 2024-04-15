@@ -1,0 +1,34 @@
+<?xml  version="1.0" encoding="utf-8"?>
+<Conf>
+    <OperatingMode>Production</OperatingMode> <!--Test or Production-->
+    <MercProfile>Stage_Account_Logistics_C2C</MercProfile>
+    <IsProjectContractor>Y</IsProjectContractor>
+
+    <MerchantInfo>
+        <MInfo name="Production_Account">
+           <MerchantID>3407639</MerchantID>
+            <HashKey>CwC0H0U5UYO08T3n</HashKey>
+            <HashIV>VExnOsY87oNp4SEN</HashIV>
+        </MInfo>
+        <MInfo name="Stage_Account_Logistics_B2C">
+            <MerchantID>3407639</MerchantID>
+            <HashKey>CwC0H0U5UYO08T3n</HashKey>
+            <HashIV>VExnOsY87oNp4SEN</HashIV>
+        </MInfo>
+        <MInfo name="Stage_Account_Logistics_C2C">
+              <MerchantID>3407639</MerchantID>
+            <HashKey>CwC0H0U5UYO08T3n</HashKey>
+            <HashIV>VExnOsY87oNp4SEN</HashIV>
+        </MInfo>
+    </MerchantInfo>
+
+    <IgnorePayment>
+<!--        <Method>Credit</Method>
+        <Method>WebATM</Method>
+        <Method>ATM</Method>
+        <Method>CVS</Method>
+        <Method>Tenpay</Method>
+        <Method>TopUpUsed</Method>-->
+    </IgnorePayment>
+
+</Conf>

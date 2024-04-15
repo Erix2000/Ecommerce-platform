@@ -1,0 +1,91 @@
+import React, { useState, useRef, useEffect } from 'react'
+import styles from './course-list.module.scss'
+import ListRight from '@/components/course/list/list-right'
+import ListAside from '@/components/course/list/list-aside'
+import { useCart } from '@/hooks/use-cart'
+import Image from 'next/image'
+import warning2 from '@/assets/gif/icons8-warning2.gif'
+import toast from 'react-hot-toast'
+
+export default function Index({
+  courseData = {},
+  bread = {},
+  userLikeArr = {},
+  sortFun = () => {},
+  searchFun = () => {},
+  priceFun = () => {},
+  asideBtn = () => {},
+  selArrAllClear = () => {},
+  asideBtnClear = () => {},
+  tagFun = () => {},
+}) {
+  const { addItem, Toaster } = useCart()
+
+  // 商品已加入收藏吐司
+  let likeNotify = () => {
+    toast.success('課程已加入收藏')
+  }
+
+   // 商品已取消收藏吐司
+   let unlikeNotify = ()=>{
+    toast.success('課程已取消收藏')
+  }
+
+  // 測試用
+  const onButtonClick = (message) => {
+    console.log('Message from child:', message)
+  }
+
+  return (
+    <>
+      <main className={`main d-md-flex container ${styles['main container']}`}>
+        <ListAside
+          bread={bread}
+          courseData={courseData}
+          priceFun={priceFun}
+          asideBtn={asideBtn}
+          selArrAllClear={selArrAllClear}
+          asideBtnClear={asideBtnClear}
+          tagFun={tagFun}
+        />
+        <ListRight
+          courseData={courseData}
+          addItem={addItem}
+          userLikeArr={userLikeArr}
+          onButtonClick={onButtonClick}
+          sortFun={sortFun}
+          searchFun={searchFun}
+          priceFun={priceFun}
+          asideBtn={asideBtn}
+          selArrAllClear={selArrAllClear}
+          asideBtnClear={asideBtnClear}
+          likeNotify={likeNotify}
+          unlikeNotify={unlikeNotify}
+        />
+      </main>
+      <Toaster
+        toastOptions={{
+          iconTheme: {
+            primary: '#003e52',
+          },
+          position: 'bottom-right',
+          duration: 2000,
+          success: {
+            style: {
+              border: '1.5px solid #003e52',
+              borderRadius: '0',
+            },
+          },
+          error: {
+            icon: <Image src={warning2} width={25} height={25} alt="warning" />,
+
+            style: {
+              border: '1.5px solid #003e52',
+              borderRadius: '0',
+            },
+          },
+        }}
+      />
+    </>
+  )
+}

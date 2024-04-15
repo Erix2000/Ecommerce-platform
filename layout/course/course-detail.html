@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS 引入 Bootstrap 樣式表 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- Bootstrap Bundle JS 引入 Bootstrap Bundle JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons CSS 引入 Bootstrap Icons 樣式表 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Google Fonts Preconnect Google 字體預連接 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Noto Serif SC Google Font 引入 Noto Serif TC Google 字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Custom CSS 自定義樣式表 -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- calender-style -->
+    <link rel="stylesheet" href="./course-detail-style2.css">
+
+    <title>Coffee Homepage</title>
+</head>
+
+<body>
+    <!-- START: 手機側邊欄 -->
+    <nav class="nav-m">
+        <i class="bi bi-x-lg close-btn"></i>
+        <ul class="main-options">
+            <li class="product-category">
+                商品分類
+                <ul class="sub-options product-category-list">
+                    <li>全部商品</li>
+                    <li class="now">星巴克 STARBUCKS</li>
+                    <li>藍瓶咖啡 BLUE BOTTLE COFFEE</li>
+                    <li>皮爺咖啡 PEET'S COFFEE</li>
+                    <li>嘉里咖啡 illycaffe</li>
+                    <li>阿拉比卡 ％ARABICA</li>
+                    <li>優仕咖啡 UCC</li>
+                    <li>伯朗咖啡 MR. BROWN</li>
+                    <li>路易莎 LOUISA COFFEE</li>
+                    <li>咖碼咖啡 CAMA</li>
+                    <li>熙舍精品咖啡 </li>
+                </ul>
+            </li>
+
+            <li class="course-category">
+                課程專區
+                <ul class="sub-options course-category-list">
+                    <li>全部課程</li>
+                    <li>體驗課程</li>
+                    <li>一般課程</li>
+                    <li>SCA 證照課程</li>
+                </ul>
+            </li>
+            <li class="coffee-forem">
+                咖啡專欄
+                <ul class="sub-options coffee-forem-list">
+                    <li>全部文章</li>
+                    <li>基礎咖啡入門</li>
+                    <li>手沖咖啡必讀</li>
+                    <li>咖啡選豆指南</li>
+                    <li>品味咖啡生活</li>
+                    <li>咖啡器具相關</li>
+                    <li>我的收藏文章</li>
+                </ul>
+            </li>
+            <li>關於我們</li>
+            <li>常見問題</li>
+        </ul>
+    </nav>
+    <!-- END: 手機側邊欄 -->
+
+
+    <!-- 頁首開始 -->
+    <header class="header text-center">
+        <!-- nav開始 -->
+        <div class="nav row">
+            <!-- 商標開始 -->
+            <div class="header-logo col-2">
+                <a href="/">
+                    <img src="logo/logo-indigo.png" alt="" />
+                </a>
+            </div>
+            <!-- 商標結束 -->
+
+            <!-- nav連結開始 -->
+            <div class="header-ul col-8">
+                <ul class="nav-links">
+                    <li class="product-link nav-li">
+                        <a href="#" class="text-center nav-link link">品牌專區<div class="nav-dot"></div></a>
+                        <div class="brand-menu header-mainmenu">
+                            <ul>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>全部品牌
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>星巴克 STARBUCKS
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>藍瓶咖啡 BLUE BOTTLE COFFEE
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>皮爺咖啡 PEET'S COFFEE
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>嘉里咖啡 illycaffe
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>阿拉比卡 ％ARABICA
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>優仕咖啡 UCC
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>伯朗咖啡 MR. BROWN
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>路易莎 LOUISA COFFEE
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>咖碼咖啡 CAMA
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>熙舍精品咖啡
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="class-link nav-li">
+                        <a href="#" class="nav-link link">課程專區<div class="nav-dot"></div></a>
+                        <div class="class-menu header-mainmenu">
+                            <ul>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>全部課程
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>體驗課程
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>一般課程
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>SCA證照課程
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="article-link nav-li">
+                        <a href="#" class="nav-link link">咖啡專欄<div class="nav-dot"></div></a>
+                        <div class="article-menu header-mainmenu">
+                            <ul>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>全部文章
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>基礎咖啡入門
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>手沖咖啡必讀
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>咖啡選豆指南
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>品味咖啡生活
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>咖啡器具相關
+                                    </a></li>
+                                <li><a href="" class="menu-link link">
+                                        <div class="menu-dot"></div>我的收藏文章
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="about-link nav-li"><a href="#" class="nav-link link">關於我們<div class="nav-dot"></div></a>
+                    </li>
+                    <li class="faq-link nav-li"><a href="#" class="nav-link link">常見問題<div class="nav-dot"></div></a>
+                    </li>
+                </ul>
+                <!-- <div class="dot"></div> -->
+            </div>
+            <!-- nav連結結束 -->
+
+            <!-- 導航圖示開始 -->
+            <div class="header-icon text-center col-2">
+                <a href="" class="link"><i class="bi bi-person-fill"></i></a>
+                <span>｜</span>
+                <a href="" class="link"><i class="cart-icon bi bi-cart-fill"></i></a>
+                <div class="cart-num">8</div>
+                <i class="list-icon bi bi-list"></i>
+            </div>
+
+            <!-- 導航圖示結束 -->
+        </div>
+        <!-- 導航結束 -->
+    </header>
+    <!-- 頁首結束 -->
+
+    <!-- 主要內容開始 -->
+    <main class="main d-md-flex container">
+        <!-- 側邊欄開始 -->
+        <!-- START: 手機版會員中心導覽列 -->
+        <div class="member-center-nav d-md-none">
+            <ul class="member-center-list">
+                <li>會員資料</li>
+                <li>歷史訂單</li>
+                <li>點數紀錄</li>
+                <li>評論紀錄</li>
+                <li>優惠券</li>
+                <li>收藏商品</li>
+                |
+                <li class="active">講師資料</li>
+                <li>文章管理</li>
+                <li>課程檢視</li>
+            </ul>
+        </div>
+        <!-- END: 手機版會員中心導覽列 -->
+        <aside class="aside">
+            <div>
+                <!-- 麵包屑導航開始 -->
+                <div class="bread">
+                    <span> <a href="" class="link">首頁</a> </span>/
+                    <span> <a href="" class="link">課程專區</a> </span>/<span>
+                        <a href="" class="link">全部課程</a>
+                    </span>
+                </div>
+                <!-- 麵包屑導航結束 -->
+
+                <!-- 區塊選單開始 -->
+                <div class="block-menu">
+                    <label for="block-mainmenu" class="form-label aside-title">課程專區</label>
+                    <ul class="block-mainmenu mb-3">
+                        <li><a href="#" class="link">
+                                <div class="aside-dot"></div>全部課程
+                            </a></li>
+                        <li><a href="#" class="link">
+                                <div class="aside-dot"></div>體驗課程
+                            </a></li>
+                        <li><a href="#" class="link">
+                                <div class="aside-dot"></div>一般課程
+                            </a></li>
+                        <li><a href="#" class="link">
+                                <div class="aside-dot"></div>SCA證照課程
+                            </a></li>
+                    </ul>
+                </div>
+                <!-- 區塊選單結束 -->
+
+                <hr style="border: 1px solid #003e52;" />
+
+                <!-- 篩選區段開始 -->
+                <div class="aside-sectitle">篩選</div>
+                <div class="block-menu">
+                    <label for="customRange1" class="aside-thrtitle form-label">價格</label>
+                    <input type="range" class="form-range" id="price-range" min="100" max="200" />
+                </div>
+                <!-- 篩選區段結束 -->
+                <!-- 第一選單區塊開始 -->
+                <div class="block-firstmenu block-menu">
+                    <div class="aside-thrtitle">課程總類</div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="mainmenu-first" />
+                        <label class="form-check-label link" for="mainmenu-first">烘豆</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="mainmenu-second" checked />
+                        <label class="form-check-label link" for="mainmenu-second">手沖</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="mainmenu-third" checked />
+                        <label class="form-check-label link" for="mainmenu-third">拉花</label>
+                    </div>
+                </div>
+                <div class="block-submenu block-menu">
+                    <div class="aside-thrtitle">開課教室</div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="secmenu-first" />
+                        <label class="form-check-label link" for="secmenu-first">台北教室</label>
+                    </div>
+                    <!-- 第一選單區塊結束 -->
+                    <!-- 第二選單區塊開始 -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="secmenu-second" checked />
+                        <label class="form-check-label link" for="secmenu-second">台中教室</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="secmenu-third" checked />
+                        <label class="form-check-label link" for="secmenu-third">台南教室</label>
+                    </div>
+                </div>
+                <!-- 第二選單區塊結束 -->
+                <!-- 第三選單區塊開始 -->
+                <div class="block-thirdmenu block-menu">
+                    <!-- 表單選項開始 -->
+                    <div class="aside-thrtitle">開課日期</div>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>全部</option>
+                        <option value="1">近一週</option>
+                        <option value="2">近一個月</option>
+                    </select>
+                    <!-- 表單選項結束 -->
+                </div>
+                <!-- 第三選單區塊結束 -->
+            </div>
+            <!-- 按鈕群組開始 -->
+            <div class="btn-group">
+                <a type="button" class="text-center col-12 aside-button1">篩選</a>
+                <a type="button" class="text-center col-12 aside-button2">重新篩選</a>
+            </div>
+            <!-- 按鈕群組結束 -->
+        </aside>
+        <!-- 側邊欄結束 -->
+
+
+        <!-- 主要內容區段開始 -->
+        <div class="content container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 mainImg"><img src="https://fakeimg.pl/440x440/" class="card-img"
+                            alt="...">
+                    </div>
+                    <div class="col-12 col-md-6 courseText">
+                        <h4 class="subTitle">SCA CSP Brewing 咖啡萃取(金杯理論) 基礎級+中級 國際咖啡證照</h4>
+                        <h5 class="course-location">::台北教室::</h5>
+                        <br>
+                        <br>
+                        <div class="course-outline">
+                            喜歡咖啡，熱愛咖啡，想開咖啡廳？<br>可是到處都是咖啡廳，我應該怎麼開？<br>我沒有龐大的資金，我能開店嗎？<br>如果你有以上想法一定不能錯過我的創業咖啡課程！
+                        </div>
+                        <br>
+                        <br>
+                        <div class="course-text">
+                            <div class="course-price">
+                                <p class="text-danger" style="font-size: 1.5em;">NT$2800</p>
+                                <p class="text-secondary" style="font-size: 1.2em; text-decoration: line-through;">
+                                    NT$2999</p>
+                            </div>
+                            <a class="product-like" type="button" href=""><img src="/image/icon/stroke.svg"
+                                    alt="" /></a>
+                        </div>
+                        <!-- 預約視窗 -->
+                        <div class="btn-book">
+                            <button class="btn-booking" type="" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">立即預約</button>
+                            <div class="course-booking">* 剩餘名額:5</div>
+                        </div>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-body ">
+                                <div class="col-12"><img src="https://fakeimg.pl/440x440/" class="card-img" alt="...">
+                                    <br>
+                                    <br>
+                                    <h4 class="borderLeftOffcanvas">課程名稱</h4>
+                                    <div class="textOffcanvas">手沖咖啡基礎課程2天</div>
+                                    <br>
+                                    <h4 class="borderLeftOffcanvas">授課導師</h4>
+                                    <div class="textOffcanvas">蔡幸蒲 老師</div>
+                                    <br>
+                                    <h4 class="borderLeftOffcanvas">開課日期</h4>
+                                    <div class="textOffcanvas">2024.01.13 ~ 2024.01.14</div>
+                                    <br>
+                                    <h4 class="borderLeftOffcanvas">地 點</h4>
+                                    <div class="textOffcanvas">台北市士林區美德街16巷1號</div>
+
+                                    <br>
+                                    <h4 class="borderLeftOffcanvas">優惠價格</h4>
+                                    <div class="textOffcanvas">
+                                        <span class="text-danger" style="font-size: 1.5em;">NT$2800</span>
+                                        <span class="text-secondary"
+                                            style="font-size: 1em; text-decoration: line-through;">NT$2999</span>
+                                        <i class="bi bi-heart-fill text-danger"></i>
+                                    </div>
+                                    <!-- <p class="textOffcanvas">（2人同行享9折優惠）</p> -->
+                                    <br>
+                                    <a href="" class="btn light ">加入購物車</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 預約視窗結束 -->
+
+                    </div>
+                </div>
+                <br>
+                <div class="product-sub-content">
+                    <div class="panel-group">
+                        <input type="radio" name="panel-radio" id="radio1" class="panel-control" checked />
+                        <input type="radio" name="panel-radio" id="radio2" class="panel-control" />
+                        <div class="tab-group">
+                            <label for="radio1" class="active">課程介紹</label>
+                            <label for="radio2">課程評價</label>
+                        </div>
+                        <div class="label-line"></div>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="pb-3 mb-4">
+                                    <h4 class="borderLeft">課程介紹</h4>
+                                </div>
+                                <h4 class="subTitle">手沖咖啡基礎課程</h4>
+                                <h4 class="subTitle">台北/台中/高雄 預約制</h4>
+                                <br>
+                                <ul class="list-unstyled">
+                                    <li>授課老師｜蔡幸蒲</li>
+                                    <li>● SCA 國際精品咖啡協會｜AST 講師暨考官</li>
+                                    <li>● SCAE Coffee Diploma｜100學分認證</li>
+                                    <li>● SCA烘焙,萃取,義式,感官｜專業級認證</li>
+                                    <li>● CQI 國際咖啡品質機構｜認證鑒定師</li>
+                                    <p>開課人數｜10名 學員
+                                        <br>課程時間｜2024.01.13 ~ 2024.01.14
+                                        <br>09:00 ~ 17:00 ，共 2 日
+                                    </p>
+                                </ul>
+
+                                <p>對於手沖咖啡的你，習得各家技法，總是不得要領。也喝不懂自己冲的咖啡？
+                                    <br>對手沖咖啡既好奇又膽怯又想了解的你！日日沖、夜夜沖，卻不知如何精進手沖技法？
+                                    <br>手沖入門課程，帶領你揮開迷霧，一探究竟。
+                                </p>
+                                <p>
+                                    <br>①手沖器具大解密：教你認識與選對合適手沖器具
+                                    <br>② 手沖基礎心法：從基本功練起的技法
+                                    <br>③ 實用沖煮技法教學：專業講師示範與講解沖煮過程。
+                                    <br>④學員實作：每位學員2次實際沖煮
+                                    <br>⑤ 咖啡品飲與討論：每次沖煮後，咖啡品飲與討論，喝懂自己沖的咖啡。
+                                    <br>⑥ 基礎知識與咖啡豆選購指南：超豐富咖啡知識補給、教你不踩雷的選對咖啡豆。
+                                </p>
+                            </div>
+                            <div class="col-md-4 mdNone">
+                                <img src="https://fakeimg.pl/440x400/" class="img-fluid" alt="咖啡課程圖片">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 評論列表部分 -->
+                    <div class="container my-4">
+                        <hr>
+                        <div class="pb-3 mb-4">
+                            <h4 class="borderLeft">顧客評價</h4>
+                        </div>
+                        <div class="list-group customerReviews">
+                            <!-- 單個評論項目 -->
+                            <div class="customerReview ">
+                                <div class="row align-items-center"> <!-- 添加了g-0和align-items-center類 -->
+                                    <div class="col-auto">
+                                        <img src="https://fakeimg.pl/260x260/" alt="頭像" class="rounded-circle"
+                                            style="width: 50px;">
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <!-- 添加了align-items-center類 -->
+                                            <h5 class="mb-1 me-2">陳先生</h5> <!-- 添加了me-3類以增加間距 -->
+                                            <p class="mb-1">
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                            </p>
+                                        </div>
+                                        <p class="mb-1">此課程非常棒！很直得來這邊學習～</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customerReview">
+                                <div class="row align-items-center"> <!-- 添加了g-0和align-items-center類 -->
+                                    <div class="col-auto">
+                                        <img src="https://fakeimg.pl/260x260/" alt="頭像" class="rounded-circle"
+                                            style="width: 50px;">
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <!-- 添加了align-items-center類 -->
+                                            <h5 class="mb-1 me-2">張小姐</h5> <!-- 添加了me-3類以增加間距 -->
+                                            <p class="mb-1">
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                            </p>
+                                        </div>
+                                        <p class="mb-1">老師很會教學，學到了很多東西</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customerReview">
+                                <div class="row align-items-center"> <!-- 添加了g-0和align-items-center類 -->
+                                    <div class="col-auto">
+                                        <img src="https://fakeimg.pl/260x260/" alt="頭像" class="rounded-circle"
+                                            style="width: 50px;">
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <!-- 添加了align-items-center類 -->
+                                            <h5 class="mb-1 me-2">陳先生</h5> <!-- 添加了me-3類以增加間距 -->
+                                            <p class="mb-1">
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                            </p>
+                                        </div>
+                                        <p class="mb-1">讚！第一次瞭解到咖啡原來有這麼多細節！</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customerReview">
+                                <div class="row align-items-center"> <!-- 添加了g-0和align-items-center類 -->
+                                    <div class="col-auto">
+                                        <img src="https://fakeimg.pl/260x260/" alt="頭像" class="rounded-circle"
+                                            style="width: 50px;">
+                                    </div>
+                                    <div class="col">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <!-- 添加了align-items-center類 -->
+                                            <h5 class="mb-1 me-2">張小姐</h5> <!-- 添加了me-3類以增加間距 -->
+                                            <p class="mb-1">
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                                <i class="star bi bi-star-fill"></i>
+                                            </p>
+                                        </div>
+                                        <p class="mb-1">會想報名之後的完整課程，兩個人一起超優惠～！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="" class="star text-decoration-none">
+                                點擊向下看更多<i class="bi bi-chevron-double-down"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 主要內容區段結束 -->
+    </main>
+    <!-- 主要內容結束 -->
+
+    <!-- 頁尾開始 -->
+    <footer class="footer">
+        <div class="main-footer d-flex row">
+            <div class="footer-logo col-4">
+                <img src="/logo/logo-white.png" alt="" style="width: 100%" />
+            </div>
+            <!-- 頁尾商標結束 -->
+
+            <!-- 頁尾連結開始 -->
+            <div class="footer-ul d-flex col-9 justify-content-center">
+                <ul>
+                    關於我們
+                    <hr />
+                    <li>‧ 品牌故事</li>
+                    <li>‧ 商店簡介</li>
+                    <li>‧ 門市資訊</li>
+                    <li>‧ 隱私權及網站使用條例</li>
+                </ul>
+                <ul>
+                    客服資訊
+                    <hr />
+                    <li>‧ 常見問題</li>
+                    <li>‧ 客服留言</li>
+                    <li>‧ 聯絡我們</li>
+                </ul>
+                <ul>
+                    公司資訊
+                    <hr />
+                    <li>‧ E-mail：mrbeancoffee@gmail.com</li>
+                    <li>‧ service@mrbean.com</li>
+                    <li>‧ Tel :+886-2-3322-1888</li>
+                    <li>‧ Mr. Bean 豆豆先生有限公司</li>
+                    <li>‧ 26241567</li>
+                </ul>
+            </div>
+            <!-- 頁尾連結結束 -->
+        </div>
+        <p class="text-center">
+            &copy; 2024 MR.BEAN COFFEE INC., ALL RIGHTS RESERVED
+        </p>
+        <div class="contact-icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-chat-dots"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-house-door-fill"></i>
+        </div>
+    </footer>
+
+    <!-- 頁尾結束 -->
+
+    <script src="/mobile.js"></script>
+
+</body>
+
+</html>

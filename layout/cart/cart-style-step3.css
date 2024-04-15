@@ -1,0 +1,172 @@
+main {
+  min-height: calc(100vh - 90px - 355px);
+}
+main section.proccess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+main section.proccess .proccess-step {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+main section.proccess .proccess-step .proccess-circle {
+  margin-inline: 2rem;
+  width: 50px;
+  height: 50px;
+  background-color: #003e52;
+  border-radius: 50%;
+}
+main section.proccess .proccess-step .proccess-circle .step-num {
+  line-height: 50px;
+  color: #ffffff;
+}
+main section.proccess .proccess-step .step-title {
+  padding-top: 1rem;
+}
+main section.proccess .proccess-line {
+  width: 270px;
+  height: 10px;
+  background-color: #003e52;
+  margin-bottom: 3.5rem;
+}
+main section.proccess .proccess-iconM {
+  display: none;
+}
+main .not-this-proccess {
+  background-color: #d9d9d9 !important;
+}
+main .not-this-proccess .step-num {
+  color: #003e52 !important;
+}
+main section.cart-success {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+main section.cart-success .icon {
+  font-size: 80px;
+}
+main section.cart-success p {
+  padding-top: 1rem;
+  font-size: 20px;
+}
+main section.summary-info {
+  width: 800px;
+}
+main section.summary-info .title {
+  font-size: 32px;
+  margin-block: 3rem;
+  border-left: 5px solid #003e52;
+  padding-left: 1rem;
+  margin-left: -1.5rem;
+}
+main section.summary-info .row {
+  font-size: 24px;
+  margin-block: 1rem;
+}
+main section.summary-info .bottom {
+  margin-bottom: 5rem;
+}
+main section.direct {
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+main section.direct .direct-button {
+  text-decoration: none;
+  width: 160px;
+  height: 50px;
+  text-align: center;
+  line-height: 44px;
+  font-size: 18px;
+  margin-inline: 0.5rem;
+  transition: all 0.3s ease;
+}
+main section.direct .go-check {
+  border: 3px solid #003e52;
+  color: #003e52;
+}
+main section.direct .go-product {
+  border: 3px solid #003e52;
+  background-color: #003e52;
+  color: #ffffff;
+}
+main section.direct .go-product:hover {
+  background-color: #bc955c;
+  border: 3px solid #bc955c;
+}
+
+@media screen and (max-width: 430px) {
+  main {
+    max-width: 390px !important;
+  }
+  main section.proccess .proccess-circle {
+    font-size: 14px;
+    width: 37px !important;
+    height: 37px !important;
+  }
+  main section.proccess .proccess-circle .step-num {
+    line-height: 37px !important;
+  }
+  main section.proccess .proccess-line {
+    display: none;
+  }
+  main section.proccess .proccess-iconM {
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: -3rem;
+  }
+  main section.proccess .step-title {
+    font-size: 12px;
+  }
+  main section.cart-success .icon {
+    font-size: 70px;
+  }
+  main section.cart-success p {
+    font-size: 18px;
+  }
+  main section.summary-info {
+    width: 430px;
+  }
+  main section.summary-info .title {
+    margin-left: 0rem;
+    font-size: 24px;
+  }
+  main section.summary-info .row {
+    font-size: 16px;
+  }
+  main section.summary-info .bottom {
+    margin-bottom: 3rem;
+  }
+  main section.direct {
+    margin-bottom: 3rem;
+  }
+  main section.direct .direct-button {
+    width: 140px;
+    height: 43px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 14px;
+    margin-inline: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  main section.direct .go-check {
+    border: 3px solid #003e52;
+    color: #003e52;
+  }
+  main section.direct .go-product {
+    border: 3px solid #003e52;
+    background-color: #003e52;
+    color: #ffffff;
+  }
+  main section.direct .go-product:hover {
+    background-color: #003e52;
+    border: 3px solid #003e52;
+  }
+}/*# sourceMappingURL=cart-style-step3.css.map */

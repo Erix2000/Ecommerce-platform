@@ -1,0 +1,291 @@
+@import '@/styles/variables.scss';
+
+.content {
+  margin-top: 20px;
+
+  .forum-class {
+    margin-top: 60px;
+    color: $indigo-color;
+    font-size: $h1;
+    border-left: 4px solid $skin-color;
+    padding: 0 0 0 16px !important;
+  }
+  .total-page {
+    color: $indigo-color;
+    font-size: $h4;
+    text-align: center;
+    margin-top: 25px;
+    letter-spacing: 1.5px;
+  }
+  // 下拉式選單開始---------------
+  .input-box {
+    display: flex;
+    color: $indigo-color;
+    font-size: $h5;
+    font-weight: $text-weight-medium;
+    letter-spacing: $regular-spacing;
+    padding-block: 20px;
+    padding-inline: 20px;
+
+    .custom-select {
+      margin-right: 20px;
+      width: 180px;
+      text-align: center;
+      position: relative;
+
+      .custom-checkbox {
+        display: flex;
+        align-items: center;
+
+        & input {
+          display: none;
+        }
+      }
+
+      .custom-options {
+        width: 180px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        z-index: 99;
+      }
+
+      .selected {
+        border-bottom: 2px solid $indigo-color;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      .custom-option {
+        border-inline: 2px solid $indigo-color;
+        border-bottom: 2px solid $indigo-color;
+        padding: 5px 10px;
+        background-color: $white-color;
+        cursor: pointer;
+      }
+
+      .custom-option:hover {
+        background-color: $indigo-color;
+        color: $white-color;
+      }
+
+      .checkmark {
+        position: relative;
+        height: 20px;
+        width: 20px;
+        border: 1px solid #003e52;
+        display: inline-block;
+      }
+
+      .custom-checkbox & input:checked + .checkmark::after {
+        content: '';
+        position: absolute;
+
+        left: 6px;
+        top: 2px;
+        width: 6px;
+        height: 12px;
+        border: solid $white-color;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+        background-color: transparent;
+      }
+
+      .custom-checkbox & input:checked + .checkmark {
+        background-color: $indigo-color;
+      }
+    }
+    // 下拉式選單結束---------------
+    .forum-card {
+      border-radius: 0;
+      box-shadow: 0px 4px 9.4px rgba(0, 0, 0, 0.25);
+
+      :hover {
+        // opacity: 0.8;
+        // background: #d9d9d9;
+        cursor: pointer;
+        .card-title h4 {
+          color: $skin-color;
+        }
+        .forum-introduce {
+          color: $black-color;
+        }
+      }
+
+      .img-fluid {
+        width: 100%; /* 讓圖片寬度自適應容器 */
+        height: 100%; /* 保持圖片高度自適應容器 */
+        object-fit: cover; /* 裁剪圖片以填滿容器 */
+        overflow: hidden;
+      }
+
+      .card-title h4 {
+        font-weight: 800;
+        font-size: 28px;
+        margin-left: 5px;
+        margin-top: 20px;
+        text-align: justify;
+      }
+
+      .forum-introduce {
+        font-weight: $text-weight-medium;
+        font-size: $h4;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        margin-left: 5px;
+        margin-top: 20px;
+        margin-right: 20px;
+        text-align: justify;
+      }
+      .sort {
+        margin-left: 5px;
+        margin-top: 40px;
+
+        .hashtag {
+          font-size: $h6;
+          color: $indigo-color !important;
+          letter-spacing: 3px;
+          margin-top: 20px;
+          :hover {
+            color: $skin-color;
+          }
+        }
+        span {
+          color: $indigo-color;
+          margin-top: 20px;
+          :hover {
+            color: $skin-color;
+          }
+        }
+        .like {
+          width: 25px;
+          margin-top: 60px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .product-list-pag {
+    display: flex;
+    justify-content: center;
+    padding-block: 30px;
+  }
+  .product-list-pag .product-list-ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    font-size: $h4;
+  }
+  .product-list-pag .product-list-ul a {
+    display: block;
+    width: 20px;
+    color: $indigo-color;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid transparent;
+  }
+  .product-list-pag .product-list-ul a:hover {
+    border-bottom: 2px solid $indigo-color;
+  }
+  // 添加當前頁籤的樣式定義
+  .product-list-pag .product-list-ul .active a {
+    color: $skin-color; // 將當前頁籤的文字顏色設為特定顏色
+    // border-bottom: 2px solid $skin-color; // 同時更改底線顏色
+    font-weight: bold; // 將當前頁籤的文字變為粗體
+  }
+}
+
+/*  頁籤 */
+@media screen and (max-width: 430px) {
+  .content {
+    .forum-class {
+      font-size: $h4;
+      border-left: 3px solid $skin-color;
+      padding: 0 0 0 8px;
+      margin-top: 20px;
+    }
+    .writer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -20px;
+      .total-page {
+        font-size: $p;
+        margin-bottom: 20px;
+      }
+      .input-box {
+        font-size: 12px;
+        padding: 18px 0px;
+        //
+      }
+    }
+
+    .forum-card {
+      line-height: 2;
+      :hover {
+        opacity: 1;
+        background: #fff;
+        .card-title h4 {
+          color: $black-color;
+        }
+        .forum-introduce {
+          color: $white-sec;
+        }
+      }
+
+      .img-fluid {
+        width: 100% !important;
+        height: 100px !important;
+        object-fit: cover; /* 裁剪圖片以填滿容器 */
+        overflow: hidden;
+      }
+      .card-title h4 {
+        font-size: $h4;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-left: 5px;
+      }
+      .forum-introduce {
+        font-size: $p;
+        color: #b2acac;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-left: 5px;
+        line-height: 1.5;
+      }
+      .sort {
+        font-size: $p;
+        line-height: 1.5;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        margin-left: 5px;
+        span {
+          .card span {
+            color: $indigo-color !important;
+            margin-left: 20px;
+            margin-top: 20px;
+          }
+        }
+        .like {
+          width: 15px !important;
+          margin-top: 35px;
+          margin-right: 15px;
+        }
+
+        .hashtag {
+          font-size: $moblietext;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}

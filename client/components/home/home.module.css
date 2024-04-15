@@ -1,0 +1,164 @@
+@charset "UTF-8";
+header {
+  z-index: 99999;
+}
+
+body {
+  background-color: #003E52 !important;
+}
+
+#carousel {
+  width: 100%;
+  max-height: 927px;
+  position: relative;
+}
+
+main {
+  max-width: 100vw !important;
+  padding-inline: 0px !important;
+}
+
+.page-change {
+  height: 10vw;
+  width: 30vw;
+  color: white;
+  font-size: 12pt;
+  bottom: 5vw;
+  right: 5vw;
+  position: absolute;
+  display: flex;
+}
+.page-change .p1,
+.page-change .p2,
+.page-change .p3 {
+  padding-right: 20px;
+}
+
+.carousel-item button {
+  background-color: white;
+  color: #003E52;
+  left: 12.5vw;
+  bottom: 20vw;
+  position: absolute;
+  padding: 15px 25px;
+  border: 0;
+  font-weight: 900;
+  letter-spacing: 2px;
+  transition: color 0.3s, background-color 0.3s; /* 添加过渡效果 */
+}
+.carousel-item button:hover {
+  color: white;
+  background-color: #BC955C;
+}
+
+.coffee-intro {
+  background-color: #003E52 !important;
+  width: 100vw;
+  padding-block: 180px;
+  justify-content: center;
+}
+.coffee-intro img {
+  cursor: pointer;
+}
+.coffee-intro .coffee-circle {
+  text-align: center;
+  max-width: 1440px;
+  justify-content: space-between;
+  display: flex;
+  margin: auto;
+}
+.coffee-intro .coffee-circle .article {
+  border-inline: 1px solid #D9D9D9;
+}
+.coffee-intro .coffee-circle .circle-title {
+  font-size: 24px;
+  letter-spacing: 6px;
+  color: #BC955C;
+  margin-bottom: 20px;
+}
+.coffee-intro .coffee-circle .circle-intro {
+  color: gray;
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-top: 20px;
+  text-align: justify;
+  padding-inline: 60px;
+}
+
+.story {
+  background-image: url("/layout/home/img/story.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  height: 754px;
+  width: 100vw;
+  display: flexbox;
+}
+.story img {
+  padding-left: 220px;
+  margin-top: 80px;
+}
+.story .about {
+  width: 50vw;
+  text-align: center;
+  margin-top: 50px;
+}
+.story button {
+  background-color: #003E52;
+  color: #FFFFFF;
+  padding: 15px 25px;
+  border: 0;
+  font-weight: 900;
+  letter-spacing: 2px;
+  transition: color 0.3s, background-color 0.3s; /* 添加过渡效果 */
+}
+.story button:hover {
+  color: #FFFFFF;
+  background-color: #BC955C;
+}
+
+.product-intro {
+  background-color: #003E52;
+  width: 100vw;
+  text-align: center;
+  align-content: center;
+  height: 650px;
+}
+.product-intro .product-picture {
+  width: 1440px;
+  text-align: center;
+  margin: auto;
+}
+.product-intro .product-picture .product-intro-title {
+  color: #FFFFFF;
+  font-size: 28px;
+  padding: 50px 0;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+.product-intro .product-picture .product-items {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.product-intro .product-picture .product-items .product-beans {
+  margin: 0 40px;
+  position: relative;
+}
+.product-intro .product-picture .product-items .bean-intro {
+  width: 378px;
+  height: 40px;
+  background-color: #BC955C;
+  font-size: 20px;
+  letter-spacing: 4px;
+  padding-top: 5px;
+  color: #FFFFFF;
+  font-weight: 400;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+.product-intro .product-picture .product-items .product-beans:hover .bean-intro {
+  display: block;
+}/*# sourceMappingURL=home.module.css.map */

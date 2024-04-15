@@ -1,0 +1,41 @@
+[
+  {
+    "product_id": "1",
+    "product_name": "星巴克 派克市場豆",
+    "product_display": 1150,
+    "product_price": 150,
+    "product_img": "https://www.starbucksathome.com/tw/sites/default/files/2021-06/SBUX_Website_WB_longShadow_PikePlace_0.png,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgsz453gA9x5SOAlfoynuFTeme1GX4BrPhutEE-bj8Og&s",
+    "product_spec": "150g",
+    "product_stock": 100
+  },
+  {
+    "product_id": "3",
+    "product_name": "星巴克 黃金烘培咖啡豆",
+    "product_display": 3150,
+
+    "product_price": 350,
+    "product_img": "https://s.yimg.com/zp/MerchandiseImages/233dd2c76a-Gd-8009520.jpg,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgsz453gA9x5SOAlfoynuFTeme1GX4BrPhutEE-bj8Og&s",
+    "product_spec": "350g",
+    "product_stock": 100
+  },
+  {
+    "product_id": "4",
+    "product_name": "星巴克 法式風味咖啡豆",
+    "product_display": 4150,
+
+    "product_price": 450,
+    "product_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqvzOlgON2E9U-ec38cJcrJqdpW1tfNpV4fX17kwFqaA&s,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgsz453gA9x5SOAlfoynuFTeme1GX4BrPhutEE-bj8Og&s",
+    "product_spec": "450g",
+    "product_stock": 5
+  },
+  {
+    "product_id": "10",
+    "product_name": "星巴克 春季限定豆",
+    "product_display": 10150,
+
+    "product_price": 1050,
+    "product_img": "https://www.costco.com.tw/medias/sys_master/images/h84/h64/85001690775582.jpg,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgsz453gA9x5SOAlfoynuFTeme1GX4BrPhutEE-bj8Og&s",
+    "product_spec": "1050g",
+    "product_stock": 1
+  }
+]

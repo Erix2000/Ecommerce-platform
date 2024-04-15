@@ -1,0 +1,12 @@
+[
+    {
+        "brand_id":"00",
+        "brand_name":"全部品牌",
+        "brand_img":"[\"1.webp\",\"2.webp\"]"
+    },
+    {
+        "brand_id":"01",
+        "brand_name":"星巴克",
+        "brand_img":"[\"1.jpg\",\"2.jpg\"]"
+    }
+]

@@ -1,0 +1,100 @@
+@import "./variables.scss"; 
+.userInfoCard {
+  display: none;
+  position: absolute;
+  top: 90px;
+right: -300%;
+
+  width: 250px; 
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+  padding: 10px;
+  z-index: 10;
+
+  &.show {
+    display: block;
+  }
+}
+
+.cardHeader,
+.cardBody,
+.buttonGroup {
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.userEmail,
+.userPoints{
+  margin: 0;
+  padding: 2px 0;
+  font-size: 16px;
+  text-decoration: none;
+  color: $indigo-color;
+}
+.userEmail{
+  font-size: 12px;
+}
+.userPoints:hover{
+  color: $skin-color;
+}
+
+.buttonGroup{
+  display: flex;
+  gap: 1px;
+  
+  .manageButton{
+    border-radius: 10px 0 0 10px;
+    text-decoration: none;
+  }
+  .logoutButton {
+    border-radius: 0 10px 10px 0;
+  }
+  .logoutButton,
+  .manageButton {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    color: $white-color;
+    background-color: $indigo-color;
+    font-size: 18px;
+    cursor: pointer;
+
+    margin-top: 5px;
+  
+    &:hover {
+      background-color: $skin-color;
+    }
+  }
+}
+.cardFooter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .notion{
+    border: 0;
+    background-color: transparent;
+    font-size: 14px;
+    color: $indigo-color;
+    &:hover{
+    color: $skin-color;
+  }
+  }
+  
+}
+.loginButton{
+  border: 0;
+  background-color: $indigo-color;
+  color: $white-color;
+  padding: 10px 20px;
+}
+@media screen and (max-width: 1200px) {
+  .userInfoCard {
+    top: 110% !important; 
+  }
+}
